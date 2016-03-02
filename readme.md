@@ -73,12 +73,12 @@ Allows us to run Ruby code one line at a time.
 
 > What is `gem`?
 
-### Some Differences From Javascript (5min)
+### Some Differences From Javascript (5 minutes / 0:20)
 
 Based on your homework last night, identify a programming concept shared by Javascript and Ruby and compare/contrast its implementation in each of the languages.
 - BOARD: Share and write on board.
 
-#### Variables (5min)
+#### Variables (5 minutes / 0:25)
 
 No longer need to precede new variables with `var`. Just use the name of the variable!
 * Variables are instantiated as they are used.
@@ -123,7 +123,7 @@ end
 # => nil
 ```
 
-#### `puts` and `gets` (5min)
+#### `puts` and `gets` (5 minutes / 0:30)
 
 `puts` is the equivalent of Javascripts `console.log()`.
 
@@ -179,7 +179,7 @@ Everything in Ruby is an **object**.
   * Not a new concept. Some data types in Javascript had their own properties and methods (e.g., `string.length`).
 * Will learn more about this during your OOP class...
 
-#### Numbers (5min)
+#### Numbers (5 minutes / 0:35)
 
 Ruby uses same arithmetic operators as Javascript
 * `+`, `-`, `*`, `/`, `%`
@@ -211,7 +211,7 @@ Ruby uses same arithmetic operators as Javascript
 # => 9
 ```
 
-#### Strings (10min)
+#### Strings (10 minutes / 0:45)
 
 Words, just like in Javascript.
 * Surrounded by single or double-quotes
@@ -281,7 +281,7 @@ puts "I am teaching WDI #{class_number}"
 # => nil
 ```
 
-#### Booleans (5min)
+#### Booleans (5 minutes / 0:50)
 
 Still `true` and `false`.
 * We'll be using them in conditionals and comparisons just like in Javascript.
@@ -296,7 +296,7 @@ Comparisons in Ruby are nearly identical to Javascript
 * **BOARD:** What values were "falsey" in Javascript?
 * The only falsey values in Ruby are `nil` and `false`.
 
-#### Nil (5min)
+#### Nil (5 minutes / 0:55)
 
 Ruby's "nothing".
 * The equivalent of Javascript's `null`.
@@ -320,15 +320,15 @@ something.nil?
 # => true
 ```
 
-### Exercise: Temperature Converter (Part I) (20min)
+### Exercise: Temperature Converter (Part I) (20 minutes / 1:15)
 
 [Temperature Converter (Ruby)](https://github.com/ga-dc/temperature_converter_ruby)
 
-### BREAK (5min)
+### BREAK (10 minutes / 1:25)
 
 ### Data Collections
 
-#### Arrays (10min)
+#### Arrays (10 minutes / 1:35)
 
 An ordered collection of related values. Same syntax as Javascript arrays.
 * Square brackets.
@@ -435,7 +435,7 @@ numbers.shuffle
 # => [5, 1, 4, 2, 3]
 ```
 
-#### Ranges (2min)
+#### Ranges (5 minutes / 1:40)
 
 Use ranges to quickly generate arrays of data types.
 * Parentheses.
@@ -451,7 +451,7 @@ Use ranges to quickly generate arrays of data types.
 ```
 
 
-#### Hashes (3min)
+#### Hashes (5 minutes / 1:45)
 
 A unordered, "dictionary-like" collection organized by key-value pairs. Very similar to Javascript objects...
 
@@ -527,9 +527,9 @@ silly_hash
 # => {:room=>1, :location_one=>"DC", :location_two=>"NY", :location_three=>"Boston"}
 ```
 
-### BREAK (5min)
+### BREAK (10 minutes / 1:55)
 
-### Conditionals (10min)
+### Conditionals (10 minutes / 2:05)
 
 #### If-Else
 
@@ -579,7 +579,7 @@ else
 end
 ```
 
-### Methods (10min)
+### Methods (10 minutes / 2:15)
 
 The equivalent of Javascript "functions."
 * Many things are referred to as "methods" in Ruby. Right now, we'll be talking about methods that are not attached to an object (e.g., array, hash).
@@ -639,11 +639,11 @@ double
 # => 10
 ```
 
-### Exercise: Temperature Converter (Part II) (30min)
+### Exercise: Temperature Converter (Part II) (30 minutes / 2:45)
 
 [Temperature Converter (Ruby)](https://github.com/ga-dc/temperature_converter_ruby)
 
-### Variables and Mutability (15min)
+### Variables and Mutability (15 minutes / 3:00)
 
 Let's talk about variables and memory allocation in Ruby.
 
@@ -706,14 +706,14 @@ a
 
 <a href="https://imgflip.com/gif/t98b3"><img src="https://i.imgflip.com/t98b3.gif" title="made at imgflip.com"/></a>
 
-#### Exercise: Variable Assignment (15min)
+#### Exercise: Variable Assignment (15 minutes / 3:15)
 
 [Exercise: Variable Assignment](https://gist.github.com/amaseda/35a62128d8795e045d49)
 * Work in pairs and answer the questions in the link above.
 * **NO CODING ALLOWED!** Stretch those brain muscles and talk these out with your partner.
 * Writing these out on your table/whiteboard with markers is strongly encouraged.
 
-### Symbols and (Im)mutability (5min)
+### Symbols and (Im)mutability (5 minutes / 3:20)
 
 Symbols are immutable values. That means they contain the same value through the entirety of a program and cannot be changed.
 * Kind of like a string that never changes.
