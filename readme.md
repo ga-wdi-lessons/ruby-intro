@@ -172,7 +172,7 @@ $
 
 ### Data Types (10 minutes / 0:35)
 
-Spend 15 minutes reading through everything up until the `In-Class Quiz`.  
+Spend 15 minutes reading through everything up until `Data Types Exercises`.  
 
 **We have to read all this ourselves? Why?**
 * While we could re-teach you what numbers, strings, conditionals, etc. are like in Ruby, you know enough about programming languages from your experience with Javascript to pick up on this information yourself pretty quickly.
@@ -406,6 +406,8 @@ When/why would you use symbols?
 
 ## Data Collections (10 minutes / 1:30)
 
+Read everything up until `Data Collections Exercises`.
+
 ### Arrays
 
 An ordered collection of related values. Same syntax as Javascript arrays.
@@ -600,7 +602,7 @@ Use ranges to quickly generate arrays of data types.
 # => ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 ```
 
-## Exercise/Quiz (15 minutes / 1:45)
+## Data Collections Exercises (15 minutes / 1:45)
 
 Complete the second set of exercises in [this repo](https://github.com/ga-wdi-exercises/ruby-basics-exercises).
 
