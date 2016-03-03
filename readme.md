@@ -170,7 +170,7 @@ How old are you?:
 $
 ```
 
-### Data Types (15 minutes / 0:40)
+### Data Types (10 minutes / 0:35)
 
 Spend 15 minutes reading through everything up until the `In-Class Quiz`.  
 
@@ -216,6 +216,8 @@ Ruby uses same arithmetic operators as Javascript
 3 ** 2 # Exponentiation
 # => 9
 ```
+
+> Notice the use of `**` to perform exponential operations in Ruby. We don't have this shortcut [in Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow).  
 
 #### Strings
 
@@ -352,15 +354,15 @@ end
 
 > Ruby also has `case`, the equivalent to Javascript's `switch` statement. If that's more your style, read about it [here](http://www.skorks.com/2009/08/how-a-ruby-case-statement-works-and-what-you-can-do-with-it/).  
 
-## In-Class Quiz: Ruby Data Types & Conditionals (15 minutes / 0:55)
+## Data Type Exercises (15 minutes / 0:50)
 
 If you finish Data Types and the Quiz early, feel free to try out one of the [Additional Exercises](https://github.com/ga-wdi-lessons/ruby-intro#additional-practice) located at the bottom of the lesson plan.
 
-### Quiz Review (10 minutes / 1:05)
+### Exercise Review (10 minutes / 1:00)
 
-## BREAK (10 minutes / 1:15)
+## BREAK (10 minutes / 1:10)
 
-### Symbols and (Im)mutability (10 minutes / 1:25)
+### Symbols and (Im)mutability (10 minutes / 1:20)
 
 Symbols are immutable values. That means they contain the same value through the entirety of a program and cannot be changed.
 * Kind of like a string that never changes.
@@ -400,7 +402,7 @@ When/why would you use symbols?
 * Make sure values that need to be constant stay constant.
 * Enhance performance. Use less memory.
 
-## Data Collections (15 minutes / 1:30)
+## Data Collections (10 minutes / 1:30)
 
 ### Arrays
 
@@ -500,18 +502,7 @@ numbers
 # => [3, 1, 4]
 ```
 
-##### Shuffle
-
-Q: Who has tried shuffling an array in this class already? What did you have to do?
-* BOOM! Ruby comes with a native array shuffling method.
-
-```rb
-numbers = [ 1, 2, 3, 4, 5 ]
-# => [1, 2, 3, 4, 5]
-
-numbers.shuffle
-# => [5, 1, 4, 2, 3]
-```
+**There are a ton of array methods available to us in Ruby.** Explore them using the [Ruby documentation](http://ruby-doc.org/core-1.9.3/Array.html).
 
 ### Hashes
 
@@ -673,9 +664,11 @@ double
 # => 10
 ```
 
-## Closing
+## Exercise: Temperature Converter (10 minute / 2:25)
 
-What do you like about Ruby? How would you compare it to Javascript at this point?
+[Temperature Converter (Ruby)](https://github.com/ga-dc/temperature_converter_ruby)
+
+## Closing (5 minutes / 2:30)
 
 ### Review Learning Objectives
 
