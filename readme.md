@@ -356,7 +356,9 @@ end
 
 ## Data Type Exercises (15 minutes / 0:50)
 
-If you finish Data Types and the Quiz early, feel free to try out one of the [Additional Exercises](https://github.com/ga-wdi-lessons/ruby-intro#additional-practice) located at the bottom of the lesson plan.
+Complete the first set of exercises in [this repo](https://github.com/ga-wdi-exercises/ruby-basics-exercises).
+
+If you finish this section early, feel free to try out one of the [Additional Exercises](https://github.com/ga-wdi-lessons/ruby-intro#additional-practice) located at the bottom of the lesson plan.
 
 ### Exercise Review (10 minutes / 1:00)
 
@@ -599,6 +601,10 @@ Use ranges to quickly generate arrays of data types.
 ```
 
 ## Exercise/Quiz (15 minutes / 1:45)
+
+Complete the second set of exercises in [this repo](https://github.com/ga-wdi-exercises/ruby-basics-exercises).
+
+If you finish this section early, feel free to try out one of the [Additional Exercises](https://github.com/ga-wdi-lessons/ruby-intro#additional-practice) located at the bottom of the lesson plan.
 
 ### Exercise/Quiz Review (10 minutes / 1:55)
 
