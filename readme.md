@@ -73,12 +73,11 @@ Allows us to run Ruby code one line at a time.
 
 > What is `gem`?
 
-### Some Differences From Javascript (5 minutes / 0:20)
+### Ruby vs. Javascript: Differences in Syntax (10 minutes / 0:25)
 
-Based on your homework last night, identify a programming concept shared by Javascript and Ruby and compare/contrast its implementation in each of the languages.
-- BOARD: Share and write on board.
+**BOARD:** What are some differences in syntax, "nice" or otherwise, you noticed between Ruby and Javascript?
 
-#### Variables (5 minutes / 0:25)
+#### Variables
 
 No longer need to precede new variables with `var`. Just use the name of the variable!
 * Variables are instantiated as they are used.
@@ -123,7 +122,7 @@ end
 # => nil
 ```
 
-#### `puts` and `gets` (5 minutes / 0:30)
+#### `puts` and `gets`
 
 `puts` is the equivalent of Javascripts `console.log()`.
 
@@ -171,15 +170,22 @@ How old are you?:
 $
 ```
 
-### Data Types
+### Data Types (15 minutes / 0:40)
+
+Spend 15 minutes reading through everything up until the `In-Class Quiz`.  
+
+**We have to read all this ourselves? Why?**
+* While we could re-teach you what numbers, strings, conditionals, etc. are like in Ruby, you know enough about programming languages from your experience with Javascript to pick up on this information yourself pretty quickly.
+* Because of this, the peculiarities of Ruby will be apparent. These are the things you need to be aware of in the next few classes.
+
+#### Everything Is An Object!
 
 Everything in Ruby is an **object**.
-* Not like a Javascript object&mdash;those are called **hashes** in Ruby.
 * By "object" we mean that everything has its own set of properties and methods.
   * Not a new concept. Some data types in Javascript had their own properties and methods (e.g., `string.length`).
-* Will learn more about this during your OOP class...
+* You will learn more about this when you dive into Ruby OOP...
 
-#### Numbers (5 minutes / 0:35)
+#### Numbers
 
 Ruby uses same arithmetic operators as Javascript
 * `+`, `-`, `*`, `/`, `%`
@@ -211,7 +217,7 @@ Ruby uses same arithmetic operators as Javascript
 # => 9
 ```
 
-#### Strings (10 minutes / 0:45)
+#### Strings
 
 Words, just like in Javascript.
 * Surrounded by single or double-quotes
@@ -242,10 +248,9 @@ Not only can you concatenate strings, now you can multiply them too!
 # Multiplication
 "Hello there! " * 3
 # => "Hello there! Hello there! Hello there! "
-
 ```
 
-##### Interpolation
+##### String Interpolation
 
 Sometimes you will want to print out a string that incorporates a variable. For example...
 
@@ -281,7 +286,7 @@ puts "I am teaching WDI #{class_number}"
 # => nil
 ```
 
-#### Booleans (5 minutes / 0:50)
+#### Booleans
 
 Still `true` and `false`.
 * We'll be using them in conditionals and comparisons just like in Javascript.
@@ -296,7 +301,7 @@ Comparisons in Ruby are nearly identical to Javascript
 * **BOARD:** What values were "falsey" in Javascript?
 * The only falsey values in Ruby are `nil` and `false`.
 
-#### Nil (5 minutes / 0:55)
+#### Nil
 
 Ruby's "nothing".
 * The equivalent of Javascript's `null`.
@@ -320,15 +325,44 @@ something.nil?
 # => true
 ```
 
-### Exercise: Temperature Converter (Part I) (20 minutes / 1:15)
+### Conditionals
 
-[Temperature Converter (Ruby)](https://github.com/ga-dc/temperature_converter_ruby)
+Pretty similar to Javascript, with some differences.
+* No parentheses or curly brackets required.
+* Begin blocks using `if`, `elsif` **(no second "e"!)** and `else`
+* We close the whole loop using `end`.
+  - This will be used throughout Ruby when dealing with code blocks (e.g., method/function).
 
-### BREAK (10 minutes / 1:25)
+Here's an example where we check for height at a roller coaster...
 
-### Data Collections
+```rb
+# In app.rb
 
-#### Arrays (10 minutes / 1:35)
+puts "Welcome to the Iron Rattler! How tall are you (in feet)?"
+height = gets.chomp
+
+if height < 4
+  puts "Sorry, you'll fly out of your seat if we let you on."
+elsif height < 7
+  puts "All aboard!"
+else
+  puts "If you value your head, you should not get on this ride."
+end
+```
+
+> Ruby also has `case`, the equivalent to Javascript's `switch` statement. If that's more your style, read about it [here](http://www.skorks.com/2009/08/how-a-ruby-case-statement-works-and-what-you-can-do-with-it/).  
+
+## In-Class Quiz: Ruby Data Types & Conditionals (15 minutes / 0:55)
+
+If you finish Data Types and the Quiz early, feel free to try out one of the additional exercises located at the bottom of the lesson plan.
+
+### Quiz Review (10 minutes / 1:05)
+
+## BREAK (10 minutes / 1:15)
+
+## Data Collections (15 minutes / 1:30)
+
+### Arrays
 
 An ordered collection of related values. Same syntax as Javascript arrays.
 * Square brackets.
@@ -371,13 +405,17 @@ numbers * 3
 # => [1, 2, 3, 1, 2, 3, 1, 2, 3]
 ```
 
-##### Array Methods
+#### Array Methods
 
 Ruby is very nice. It provides us with an extensive library of array methods we can use to traverse and manipulate arrays.
 * [Documentation](http://ruby-doc.org/core-2.2.0/Array.html)
 * Can't go over them all, but chances are if you could do it in Javascript then you can do it in Ruby.
 
-###### Push/Pop
+**IMPORTANT:** You DO NOT need to memorize these. The following is just a sample of array methods available to you. You'll come to be more familiar with these as you need them and look them up in documentation.  
+
+> **tl;dr:** The more you Google them, the better you'll remember them.  
+
+##### Push/Pop
 
 These Javascript methods also exist in Ruby and are used the same way.
 
@@ -395,7 +433,7 @@ numbers.pop
 # => 9
 ```
 
-###### Sort
+##### Sort
 * Organizes array values from lowest to highest. Numbers and strings.
 
 ```rb
@@ -406,7 +444,7 @@ numbers.sort
 # => [1, 2, 3, 4, 5]
 ```
 
-###### Delete
+##### Delete
 * Removes an argument from an array.
 * If there are multiple instances of that argument, it will delete them all.
 * Look up: `.delete_at()`, `.slice()`
@@ -422,7 +460,7 @@ numbers
 # => [3, 1, 4]
 ```
 
-###### Shuffle
+##### Shuffle
 
 Q: Who has tried shuffling an array in this class already? What did you have to do?
 * BOOM! Ruby comes with a native array shuffling method.
@@ -435,23 +473,7 @@ numbers.shuffle
 # => [5, 1, 4, 2, 3]
 ```
 
-#### Ranges (5 minutes / 1:40)
-
-Use ranges to quickly generate arrays of data types.
-* Parentheses.
-* Min and max value, separated by two periods.
-* Generate array using `.to_a` method.
-
-```rb
-(1..5).to_a
-# => [1, 2, 3, 4, 5]
-
-("a".."z").to_a
-# => ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-```
-
-
-#### Hashes (5 minutes / 1:45)
+### Hashes
 
 A unordered, "dictionary-like" collection organized by key-value pairs. Very similar to Javascript objects...
 
@@ -475,6 +497,7 @@ Accessing hash values...
 wdi_class[:teacher]
 # => "John"
 ```
+> `:teacher` is a data type that is pretty unique to Ruby called a "symbol." We'll learn more about these later in the lesson.  
 
 Modifying hash values...
 
@@ -483,10 +506,12 @@ wdi_class[:teacher] = "Jack"
 # => "Jack"
 ```
 
-##### Hash Methods
+#### Hash Methods
 
 Like arrays, Ruby also provides us with a library of hash methods.  
 * [Documentation](http://ruby-doc.org/core-2.2.0/Hash.html)
+
+> As mentioned with arrays, do not worry about memorizing these methods. Just know how to look them up should the need arise.  
 
 ##### Keys
 
@@ -527,57 +552,26 @@ silly_hash
 # => {:room=>1, :location_one=>"DC", :location_two=>"NY", :location_three=>"Boston"}
 ```
 
-### BREAK (10 minutes / 1:55)
+### Ranges
 
-### Conditionals (10 minutes / 2:05)
-
-#### If-Else
-
-Pretty similar to Javascript, with some differences.
-* No parentheses or curly brackets required.
-* Begin blocks using `if`, `elsif` **(no second "e"!)** and `else`
-* We close the whole loop using `end`.
-  - This will be used throughout Ruby when dealing with code blocks (e.g., method/function).
-
-Here's an example where we check for height at a roller coaster...
+Use ranges to quickly generate arrays of data types.
+* Parentheses.
+* Min and max value, separated by two periods.
+* Generate array using `.to_a` method.
 
 ```rb
-# In app.rb
+(1..5).to_a
+# => [1, 2, 3, 4, 5]
 
-puts "Welcome to the Iron Rattler! How tall are you (in feet)?"
-height = gets.chomp
-
-if height < 4
-  puts "Sorry, you'll fly out of your seat if we let you on."
-elsif height < 7
-  puts "All aboard!"
-else
-  puts "If you value your head, you should not get on this ride."
-end
+("a".."z").to_a
+# => ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 ```
 
-#### Case
+## Exercise/Quiz (15 minutes / 1:45)
 
-Just like Javascript's `switch` statement. Here's an example that displays a certain greeting depending on a language input.
-* Note that the default case begins with `else`
+### Exercise/Quiz Review (10 minutes / 1:55)
 
-```rb
-# In app.rb
-
-puts "Hello there! Give me a language: "
-language = gets.chomp.to_s
-
-case language
-when "spanish"
-  puts "Hola!"
-when "french"
-  puts "Bonjour!"
-when "wookie"
-  puts "URRAAGGARHRHH"
-else
-  puts "I don't know #{language}!"
-end
-```
+### BREAK (5 minutes / 2:00)
 
 ### Methods (10 minutes / 2:15)
 
@@ -638,10 +632,6 @@ double
 # Your doubled number is 10
 # => 10
 ```
-
-### Exercise: Temperature Converter (Part II) (30 minutes / 2:45)
-
-[Temperature Converter (Ruby)](https://github.com/ga-dc/temperature_converter_ruby)
 
 ### Variables and Mutability (15 minutes / 3:00)
 
@@ -764,3 +754,10 @@ What do you like about Ruby? How would you compare it to Javascript at this poin
 * [Ruby Monk](https://rubymonk.com/)
 * [Why's Poignant Guide to Ruby](http://poignant.guide/book/chapter-2.html)
 * [Ruby Koans](http://rubykoans.com/)
+
+## Additional Practice
+* [Word Ladder](https://github.com/ga-wdi-exercises/word_ladder)
+* [Who Won The Election?](https://github.com/ga-wdi-exercises/who_won_the_election)
+* [Search For Obi-Wan](https://github.com/ga-wdi-exercises/search_for_obi_wan)
+* [Pig-Latin](https://github.com/ga-wdi-exercises/pig_latin)
+* [Letter Counter](https://github.com/ga-wdi-exercises/letter_counter)
