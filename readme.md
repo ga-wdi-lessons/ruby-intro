@@ -364,7 +364,7 @@ If you finish this section early, feel free to try out one of the [Additional Ex
 
 ## BREAK (10 minutes / 1:10)
 
-### Symbols and (Im)mutability (10 minutes / 1:20)
+## Symbols (10 minutes / 1:20)
 
 Symbols are immutable values. That means they contain the same value through the entirety of a program and cannot be changed.
 * Kind of like a string that never changes.
@@ -608,11 +608,11 @@ Complete the second set of exercises in [this repo](https://github.com/ga-wdi-ex
 
 If you finish this section early, feel free to try out one of the [Additional Exercises](https://github.com/ga-wdi-lessons/ruby-intro#additional-practice) located at the bottom of the lesson plan.
 
-### Exercise/Quiz Review (10 minutes / 1:55)
+### Exercise Review (10 minutes / 1:55)
 
-### BREAK (5 minutes / 2:00)
+## BREAK (5 minutes / 2:00)
 
-### Methods (10 minutes / 2:15)
+## Methods (10 minutes / 2:15)
 
 The equivalent of Javascript "functions."
 * Many things are referred to as "methods" in Ruby. Right now, we'll be talking about methods that are not attached to an object (e.g., array, hash).
