@@ -691,6 +691,8 @@ double
 * [Ruby Monk](https://rubymonk.com/)
 * [Why's Poignant Guide to Ruby](http://poignant.guide/book/chapter-2.html)
 * [Ruby Koans](http://rubykoans.com/)
+* Screencasts
+  - [WDI8, Ruby Preview](https://youtu.be/Be4YGLovGM4)
 
 ## Additional Practice
 * [Word Ladder](https://github.com/ga-wdi-exercises/word_ladder)
