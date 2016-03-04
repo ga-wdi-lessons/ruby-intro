@@ -48,7 +48,7 @@ Ruby resides in and is processed by a webpage's server.
 
 ### A **Natural** Language
 
-* While it isn't exactly simple, a lot of its features are going to feel intuitive.  
+While it isn't exactly simple, a lot of its features are going to feel intuitive.  
 
 > "Ruby is simple in appearance, but is very complex inside, just like our human body." — Yukihiro "Matz" Matsumoto  
 
@@ -170,7 +170,7 @@ How old are you?:
 $
 ```
 
-### Data Types (10 minutes / 0:35)
+### Data Types (15 minutes / 0:40)
 
 Spend 15 minutes reading through everything up until `Data Types Exercises`.  
 
@@ -288,6 +288,35 @@ puts "I am teaching WDI #{class_number}"
 # => nil
 ```
 
+##### Symbols
+
+Symbols are, for our current purposes, lightweight strings.
+* Kind of like a string that never changes.
+* Syntax: `variable_name = :symbol_name`
+* No Javascript equivalent ([until ES6 came along!](http://www.2ality.com/2014/12/es6-symbols.html)).
+
+```rb
+favorite_animal = :dog
+# => :dog
+
+puts favorite_animal
+# dog
+# => nil
+
+other_favorite_animal = :killer_whale
+# => :killer_whale
+
+another_favorite_animal = :"flying squirrel"
+# => :"flying squirrel"
+```
+
+When/why would you use symbols?
+* Most common use is as keys in hashes (the Ruby equivalent of objects -- more on that later).
+* Make sure values that need to be constant stay constant.
+* Enhance performance. Use less memory.
+
+> There is A LOT more to symbols. We'll covering these along with data immutability in greater length during a mini-lesson.  
+
 #### Booleans
 
 Still `true` and `false`.
@@ -354,57 +383,17 @@ end
 
 > Ruby also has `case`, the equivalent to Javascript's `switch` statement. If that's more your style, read about it [here](http://www.skorks.com/2009/08/how-a-ruby-case-statement-works-and-what-you-can-do-with-it/).  
 
-## Data Type Exercises (15 minutes / 0:50)
+## Data Type Exercises (15 minutes / 0:55)
 
 Complete the first set of exercises in [this repo](https://github.com/ga-wdi-exercises/ruby-basics-exercises).
 
 If you finish this section early, feel free to try out one of the [Additional Exercises](https://github.com/ga-wdi-lessons/ruby-intro#additional-practice) located at the bottom of the lesson plan.
 
-### Exercise Review (10 minutes / 1:00)
+### Exercise Review (10 minutes / 1:05)
 
-## BREAK (10 minutes / 1:10)
+## BREAK (10 minutes / 1:15)
 
-## Symbols (10 minutes / 1:20)
-
-Symbols are immutable values. That means they contain the same value through the entirety of a program and cannot be changed.
-* Kind of like a string that never changes.
-* Syntax: `variable_name = :symbol_name`
-* No Javascript equivalent ([until ES6 came along!](http://www.2ality.com/2014/12/es6-symbols.html)).
-
-```rb
-favorite_animal = :dog
-# => :dog
-
-puts favorite_animal
-# dog
-# => nil
-
-other_favorite_animal = :killer_whale
-# => :killer_whale
-
-another_favorite_animal = :"flying squirrel"
-# => :"flying squirrel"
-```
-
-You can convert symbols to -- but not replace them with -- other data types.
-
-```rb
-favorite_animal = :dog
-# => :dog
-
-favorite_animal.to_s
-# => "dog"
-
-favorite_animal = :dog
-# => :dog
-```
-
-When/why would you use symbols?
-* Most common use is as keys in hashes (the Ruby equivalent of objects -- more on that later).
-* Make sure values that need to be constant stay constant.
-* Enhance performance. Use less memory.
-
-## Data Collections (10 minutes / 1:30)
+## Data Collections (10 minutes / 1:25)
 
 Read everything up until `Data Collections Exercises`.
 
@@ -602,17 +591,17 @@ Use ranges to quickly generate arrays of data types.
 # => ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 ```
 
-## Data Collections Exercises (15 minutes / 1:45)
+## Data Collections Exercises (15 minutes / 1:40)
 
 Complete the second set of exercises in [this repo](https://github.com/ga-wdi-exercises/ruby-basics-exercises).
 
 If you finish this section early, feel free to try out one of the [Additional Exercises](https://github.com/ga-wdi-lessons/ruby-intro#additional-practice) located at the bottom of the lesson plan.
 
-### Exercise Review (10 minutes / 1:55)
+### Exercise Review (10 minutes / 1:50)
 
-## BREAK (5 minutes / 2:00)
+## BREAK (5 minutes / 1:55)
 
-## Methods (10 minutes / 2:15)
+## Methods (10 minutes / 2:05)
 
 The equivalent of Javascript "functions."
 * Many things are referred to as "methods" in Ruby. Right now, we'll be talking about methods that are not attached to an object (e.g., array, hash).
@@ -672,7 +661,7 @@ double
 # => 10
 ```
 
-## Exercise: Temperature Converter (10 minute / 2:25)
+## Exercise: Temperature Converter (20 minute / 2:25)
 
 [Temperature Converter (Ruby)](https://github.com/ga-dc/temperature_converter_ruby)
 
