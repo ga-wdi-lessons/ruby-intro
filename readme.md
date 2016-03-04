@@ -530,6 +530,23 @@ wdi_class[:teacher] = "Jack"
 # => "Jack"
 ```
 
+You can also use strings as hash keys.
+
+```rb
+wdi_class = {
+   "teacher" => "John",  
+   "students" => [ "Yacko", "Wacko", "Dot" ],  
+   "classroom" => 2,  
+   "in_session" => true,  
+   "schedule" => {  
+     "morning" => "Ruby Basics",
+     "afternoon" => "Enumerables"
+   }
+}  
+```
+
+> Note the use of `=>` (or "hash rockets") instead of `:` when using strings as keys.  
+
 #### Hash Methods
 
 Like arrays, Ruby also provides us with a library of hash methods.  
