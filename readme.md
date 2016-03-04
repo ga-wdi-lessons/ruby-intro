@@ -13,8 +13,6 @@
   - Methods (Functions)
 * Examine Ruby symbols and data immutability.
 * List three useful methods for arrays and hashes.
-* Demonstrate how variables are stored in memory using Ruby.
-* Use "!" to modify values in memory.
 
 
 ## Intro
