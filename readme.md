@@ -14,12 +14,6 @@
 * Examine Ruby symbols and data immutability.
 * List three useful methods for arrays and hashes.
 
-
-## Intro
-
-HEADS UP: We are covering a lot of ground today. It's going to be a fast-paced class, so please raise your hand if I breeze over something quickly.
-* For technical questions, please use Slack and one of the other instructors will help you out.
-
 ## What is Ruby? (5 minutes / 0:05)
 
 Ruby is a **server-side** programming language.  
