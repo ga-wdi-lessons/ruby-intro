@@ -1,6 +1,6 @@
-## Ruby Basics
+# Ruby Basics
 
-### Learning Objectives
+## Learning Objectives
 
 * Compare/contrast Ruby and Javascript as programming languages.
 * Run Ruby code by REPL (Pry/Irb) and file.
@@ -17,63 +17,67 @@
 * Use "!" to modify values in memory.
 
 
-### Intro (1min)
+## Intro
 
 HEADS UP: We are covering a lot of ground today. It's going to be a fast-paced class, so please raise your hand if I breeze over something quickly.
 * For technical questions, please use Slack and one of the other instructors will help you out.
 
-#### What is Ruby? (5min)
+## What is Ruby? (5 minutes / 0:05)
 
-Server-side language
-* Remember Robin's diagram from Week #1?
+Ruby is a **server-side** programming language.  
 
-![Client-Server Model](http://i.imgur.com/AfiaMQP.png)
+![Client-Server Model](http://i.imgur.com/AfiaMQP.png)  
 
 Ruby resides in and is processed by a webpage's server.
-* It gathers information from the database, filters it using logic, and from that generates HTML.
-* That means you **cannot** look at or mess with a site's Ruby code as you did with Javascript.
+* What is a server?
+* It gathers information from the database, filters it using logic and from that generates HTML.
+* That means you **cannot** look at or mess with a site's Ruby code as you did with Javascript via the browser console.
 * We won't be including Ruby files in our HTML documents. You'll learn more about back-end development and how to connect everything together next week.
 
-#### What's Ruby like? (4min)
+## What's Ruby like? (5 minutes / 0:10)
 
-MINASWAN
-* Does anybody remember this from Allie's lunchtime presentation last Friday?
-  * "Matz Is Nice And So We Are Nice"
-    * Mentality not only applies to how you should treat your fellow developers, but also the philosophy behind Ruby itself
-  * Yukihiro Matsumoto ("Matz") created Ruby to increase developer happiness.
-  ![He really is quite nice.](matz-n-park.png)
+### M.I.N.A.S.W.A.N.
 
-Ruby as a "natural" language
-* While it isn't exactly simple, a lot of its features are going to feel intuitive.  
-* Matz: "Ruby is simple in appearance, but is very complex inside, just like our human body."
+* "Matz Is Nice And So We Are Nice"
+* Mentality not only applies to how you should treat your fellow developers, but also the philosophy behind Ruby itself.
+* Yukihiro Matsumoto ("Matz") created Ruby to increase developer happiness.
 
-Ethos:
+> "Programmers often feel joy when they can concentrate on the creative side of programming, so Ruby is designed to make programmers happy." — Yukihiro "Matz" Matsumoto  
 
-> "Programmers often feel joy when they can concentrate on the creative side of programming, so Ruby is designed to make programmers happy." — Yukihiro "Matz" Matsumoto
+![He really is quite nice.](matz-n-park.png)
 
-#### Tools We'll Be Using (5min)
+### A **Natural** Language
 
-We'll be running Ruby the same way we used Node to run Javascript during our first class.
+While it isn't exactly simple, a lot of its features are going to feel intuitive.  
 
-Ruby
-* Check to make sure you have Ruby installed: `$ ruby -v`
-  * Should get back something like: `ruby 2.2.1p85 (2015-02-26 revision 49769) [x86_64-darwin14]`
+> "Ruby is simple in appearance, but is very complex inside, just like our human body." — Yukihiro "Matz" Matsumoto  
+
+## Tools We'll Be Using (5 minutes / 0:15)
+
+We will be running Ruby code via the Terminal in two different ways. But first, let's make sure you're all set up...
+
+### Setting Up Ruby
+
+Check to make sure you have Ruby installed: `$ ruby -v`
+* Should get back something like: `ruby 2.2.1p85 (2015-02-26 revision 49769) [x86_64-darwin14]`
 * If you need to install: `$ rvm install 2.2`
 * Run a Ruby file: `$ ruby file_name.rb`
 
-The REPL: Pry
-* Allows us to run Ruby code one line at a time.
+### PRY (REPL)
+
+Allows us to run Ruby code one line at a time.
 * Install: `$ gem install pry`
 * Run REPL: `$ pry`
 * Quit from REPL: `exit`
 * Alternative: `$ irb`
 
-### Some Differences From Javascript (5min)
+> What is `gem`?
 
-Based on your homework last night, identify a programming concept shared by Javascript and Ruby and compare/contrast its implementation in each of the languages.
-- BOARD: Share and write on board.
+### Ruby vs. Javascript: Differences in Syntax (10 minutes / 0:25)
 
-#### Variables (5min)
+**BOARD:** What are some differences in syntax, "nice" or otherwise, you noticed between Ruby and Javascript?
+
+#### Variables
 
 No longer need to precede new variables with `var`. Just use the name of the variable!
 * Variables are instantiated as they are used.
@@ -82,9 +86,9 @@ No longer need to precede new variables with `var`. Just use the name of the var
 
 Variables are still assigned using a single equals sign ( `=` )
 
-```
-[1] pry(main)> my_favorite_animal = "flying squirrel"
-=> "flying squirrel"
+```rb
+my_favorite_animal = "flying squirrel"
+# => "flying squirrel"
 ```
 
 Although we don't use `var`, there is still syntax to designate whether a variable is local or global.
@@ -101,46 +105,50 @@ While your code will work if you close a line with `;`, common practice is not t
 
 Since I'm in a Javascript state of mind, you will notice me using them pretty often.
 
-```
-[2] pry(main)> number = 3
-=> 3
-[3] pry(main)> if( number == 3 ) # with parens
-[3] pry(main)*   puts( "It's a 3!" )  
-[3] pry(main)* end  
-It's a 3!
-=> nil
-[4] pry(main)> if number == 3 # without parens
-[4] pry(main)*   puts "It's a 3!"  
-[4] pry(main)* end  
-It's a 3!
-=> nil
+```rb
+number = 3
+# => 3
+
+if( number == 3 ) # with parens
+  puts( "It's a 3!" )  
+end  
+# It's a 3!
+# => nil
+
+if number == 3 # without parens
+  puts "It's a 3!"  
+end  
+# It's a 3!
+# => nil
 ```
 
-#### puts and gets (5min)
+#### `puts` and `gets`
 
 `puts` is the equivalent of Javascripts `console.log()`.
 
-```
-[5] pry(main)> puts "Hello, Ruby!"
-Hello, Ruby!
-=> nil
+```rb
+puts "Hello, Ruby!"
+# Hello, Ruby!
+# => nil
 ```
 
 Ruby also allows us to easily accept inputs from the command line using `gets`.
+
+```rb
+user_input = gets
+# => "My input\n" (Note that this line was typed by the user in the terminal)
+
+user_input
+# => "My input\n"
 ```
-[6] pry(main)> user_input = gets
-My input  # Note that this line was typed by the user in the terminal
-=> "My input\n"
-[7] pry(main)> user_input
-=> "My input\n"
-```
-* Usually `gets` is followed by `chomp`, which removes the new line generated by the user hitting return.
+
+* Usually `gets` is followed by `.chomp`, which removes the new line generated by the user hitting return.
 * If you need to convert your value to a number, add `.to_i` to the end of the method.
 * To demonstrate `gets` we will write our ruby in a .rb file and run it as described above.
 
-> In app.rb
+```rb
+# Run this code in app.rb
 
-```ruby
 # Asks for and stores a command line input into the variable as a string.
 puts "How old are you?: "
 user_input = gets.chomp.to_i
@@ -148,9 +156,10 @@ if user_input > 10
   puts "You are older than ten"
 end
 ```
-> In the terminal from in the same directory as app.rb
 
-```
+```bash
+# In the terminal from in the same directory as app.rb
+
 $ ruby app.rb
 How old are you?:
 20
@@ -161,40 +170,56 @@ How old are you?:
 $
 ```
 
-### Data Types
+### Data Types (15 minutes / 0:40)
+
+Spend 15 minutes reading through everything up until `Data Types Exercises`.  
+
+**We have to read all this ourselves? Why?**
+* While we could re-teach you what numbers, strings, conditionals, etc. are like in Ruby, you know enough about programming languages from your experience with Javascript to pick up on this information yourself pretty quickly.
+* Because of this, the peculiarities of Ruby will be apparent. These are the things you need to be aware of in the next few classes.
+
+#### Everything Is An Object!
 
 Everything in Ruby is an **object**.
-* Not like a Javascript object&mdash;those are called **hashes** in Ruby.
 * By "object" we mean that everything has its own set of properties and methods.
   * Not a new concept. Some data types in Javascript had their own properties and methods (e.g., `string.length`).
-* Will learn more about this during your OOP class...
+* You will learn more about this when you dive into Ruby OOP...
 
-#### Numbers (5min)
+#### Numbers
 
 Ruby uses same arithmetic operators as Javascript
 * `+`, `-`, `*`, `/`, `%`
 * Same order of operations too: P.E.M.D.A.S.  
 
-```ruby
-[8] pry(main)> 1 + 2 # Addition
-=> 3
-[9] pry(main)> 6 - 5 # Subtraction
-=> 1
-[10] pry(main)> 5 * 2 # Multiplication
-=> 10
-[11] pry(main)> 30 / 5 # Division
-=> 6
-[12] pry(main)> 31 / 5 # Note: integer division
-=> 6
-[13] pry(main)> 30 % 5 # Modulo (remainder)
-=> 0
-[14] pry(main)> 31 % 5
-=> 1
-[15] pry(main)> 3 ** 2 # Exponentiation
-=> 9
+```rb
+1 + 2 # Addition
+# => 3
+
+6 - 5 # Subtraction
+# => 1
+
+5 * 2 # Multiplication
+# => 10
+
+30 / 5 # Division
+# => 6
+
+31 / 5 # Note: integer division
+# => 6
+
+30 % 5 # Modulo (remainder)
+# => 0
+
+31 % 5
+# => 1
+
+3 ** 2 # Exponentiation
+# => 9
 ```
 
-#### Strings (10min)
+> Notice the use of `**` to perform exponential operations in Ruby. We don't have this shortcut [in Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow).  
+
+#### Strings
 
 Words, just like in Javascript.
 * Surrounded by single or double-quotes
@@ -202,65 +227,97 @@ Words, just like in Javascript.
   - [List](http://www.java2s.com/Code/Ruby/String/EscapeCharacterslist.htm)
   - Must instantiate string with double-quotes for escape characters to work.
 
-```
-[16] pry(main)> name = "John"
-=> "John"
-[17] pry(main)> full_name = "John\nDoe"
-=> "John\nDoe"
-[18] pry(main)> puts full_name
-John
-Doe
-=> nil
+```rb
+name = "John"
+# => "John"
+
+full_name = "John\nDoe"
+# => "John\nDoe"
+
+puts full_name
+# John
+# Doe
+# => nil
 ```
 
 Not only can you concatenate strings, now you can multiply them too!
 
-```ruby
+```rb
 # Concatenation
 "Hello " + "there!"
 # => "Hello there!"
 
 # Multiplication
-# Imagine using this for your pyramid exercise!
 "Hello there! " * 3
 # => "Hello there! Hello there! Hello there! "
-
 ```
 
-##### Interpolation
+##### String Interpolation
 
 Sometimes you will want to print out a string that incorporates a variable. For example...
 
-```
-[19] pry(main)> my_name = "Adrian"
-=> "Adrian"
-[20] pry(main)> puts "Hi my name is: " + my_name
-Hi my name is: Adrian
-=> nil
+```rb
+my_name = "Adrian"
+# => "Adrian"
+
+puts "Hi my name is: " + my_name
+# Hi my name is: Adrian
+# => nil
 ```
 
 This works fine. Things aren't so simple when that variable is of a different data type. Like a number...
 * Q: What's going to happen when we run this line of code?
 
-```
-[21] pry(main)> class_number = 984
-=> 984
-[22] pry(main)> puts "I am teaching WDI " + class_number
-TypeError: no implicit conversion of Fixnum into String from (pry):26:in `+'
+```rb
+class_number = 984
+# => 984
+
+puts "I am teaching WDI " + class_number
+# TypeError: no implicit conversion of Fixnum into String from (pry):26:in `+'
 ```
 
 In cases like the above, you either need to convert the variable to a string using `.to_s` OR use something called "interpolation."
 * Surround the non-string variable with a hashtag and curly brackets: `#{variable}`
 
-```
-[23] pry(main)> class_number = 984
-=> 984
-[24] pry(main)> puts "I am teaching WDI #{class_number}"
-I am teaching WDI 984
-=> nil
+```rb
+class_number = 984
+# => 984
+
+puts "I am teaching WDI #{class_number}"
+# I am teaching WDI 984
+# => nil
 ```
 
-#### Booleans (5min)
+##### Symbols
+
+Symbols are, for our current purposes, lightweight strings.
+* Kind of like a string that never changes.
+* Syntax: `variable_name = :symbol_name`
+* No Javascript equivalent ([until ES6 came along!](http://www.2ality.com/2014/12/es6-symbols.html)).
+
+```rb
+favorite_animal = :dog
+# => :dog
+
+puts favorite_animal
+# dog
+# => nil
+
+other_favorite_animal = :killer_whale
+# => :killer_whale
+
+another_favorite_animal = :"flying squirrel"
+# => :"flying squirrel"
+```
+
+When/why would you use symbols?
+* Most common use is as keys in hashes (the Ruby equivalent of objects -- more on that later).
+* Make sure values that need to be constant stay constant.
+* Enhance performance. Use less memory.
+
+> There is A LOT more to symbols. We'll covering these along with data immutability in greater length during a mini-lesson.  
+
+#### Booleans
 
 Still `true` and `false`.
 * We'll be using them in conditionals and comparisons just like in Javascript.
@@ -268,324 +325,38 @@ Still `true` and `false`.
 Comparisons in Ruby are nearly identical to Javascript
 * `!=`, `&&`, `||`
 * `<`, `>`, `<=`, `>=`, `==`
-  - Don't worry about `===` in Ruby for now. It [does not](http://mauricio.github.io/2011/05/30/ruby-basics-equality-operators-ruby.html) have the same application as in Javascript.
 
-Truthiness and falsiness is a lot less complicated in Ruby.
+> Don't worry about `===` in Ruby for now. It [does not](http://mauricio.github.io/2011/05/30/ruby-basics-equality-operators-ruby.html) have the same application as in Javascript.  
+
+"Truthiness" and "falsiness" are a lot less complicated in Ruby.
 * **BOARD:** What values were "falsey" in Javascript?
-  * `false`
-  * `0`
-  * `""`
-  * `null`
-  * `undefined`
-  * `NaN`
 * The only falsey values in Ruby are `nil` and `false`.
 
-#### Nil (5min)
+#### Nil
 
 Ruby's "nothing".
 * The equivalent of Javascript's `null`.
 * You will usually see it when something does not have a return value (e.g., a `puts` statement).
-* Also like Javascript, `nil` is falsey.
+* Like in Javascript, `nil` is falsey.
 
-Can check if something is `nil` using `.nil?`
-* **NOTE:** Any method that ends with a `?` means it will return a boolean value.
+Need to check if something is `nil`? Use `.nil?`  
+> **NOTE:** Any method that ends with a `?` means it will return a boolean value.  
 
-```
-[25] pry(main)> something = "A thing"
-=> "A thing"
-[26] pry(main)> something.nil?
-=> false
-[27] pry(main)> something = nil
-=> nil
-[28] pry(main)> something.nil?
-=> true
-```
-### Exercise: Temperature Converter (Part I) (20min)
+```rb
+something = "A thing"
+# => "A thing"
 
-[Temperature Converter (Ruby)](https://github.com/ga-dc/temperature_converter_ruby)
+something.nil?
+# => false
 
-### BREAK (5min)
+something = nil
+# => nil
 
-### Variables and Mutability (15min)
-
-Let's talk about variables and memory allocation in Ruby.
-
-Haha!
-
-![XKCD pointers comic](https://camo.githubusercontent.com/e015a8e243f53ffecd9b18fc5c8d770dde1948cc/687474703a2f2f626c6f672e70726f7465637465647374617469632e636f6d2f77702d636f6e74656e742f75706c6f6164732f323030372f30352f706f696e746572732e706e67)
-
-Why is that so funny? Because variables are pointers to values in memory.
-
-![Variables in memory diagram](https://camo.githubusercontent.com/62b04af497f124fc9b11ec3802d73497f5c9e305/687474703a2f2f64326177357865326a6c647175652e636c6f756466726f6e742e6e65742f626f6f6b732f727562792f696d616765732f7661726961626c65735f706f696e74657273312e6a7067)
-
-<a href="https://imgflip.com/gif/t9736"><img src="https://i.imgflip.com/t9736.gif" title="made at imgflip.com"/></a>
-
-#### .object_id
-
-We can use the `.object_id` method to demonstrate that two variables are pointing to the same object.
-- Returns an integer identifier for the object that is automatically generated by Ruby
-
-```
-[29] pry(main)> a = 10
-=> 10
-[30] pry(main)> b = a
-=> 10
-[31] pry(main)> a.object_id
-=> 21
-[32] pry(main)> b.object_id
-=> 21
+something.nil?
+# => true
 ```
 
-#### Bang! (The `!`)
-
-All of the Ruby data types we have discussed so far are  data types in Ruby are mutable.
-* We can not only change what values in memory variables are pointing to, but we can change those values in memory as well.
-
-Methods with an `!` attached to the end of them usually means that they will modify the object they are calling on.
-* Things can get tricky when you have multiple variables pointing at the same value. For example...
-
-```
-[33] pry(main)> a = "cheeseburger"
-=> "cheeseburger"
-[34] pry(main)> b = a
-=> "cheeseburger"
-[35] pry(main)> b.upcase!
-=> "CHEESEBURGER"
-[36] pry(main)> a
-=> "CHEESEBURGER"
-```
-
-#### Reassignment...  
-<a href="https://imgflip.com/gif/t984f"><img src="https://i.imgflip.com/t984f.gif" title="made at imgflip.com"/></a>
-#### ...vs Replacement
-<a href="https://imgflip.com/gif/t98b3"><img src="https://i.imgflip.com/t98b3.gif" title="made at imgflip.com"/></a>
-
-#### Exercise: Variable Assignment (15min)
-
-[Exercise: Variable Assignment](https://gist.github.com/amaseda/35a62128d8795e045d49)
-* Work in pairs and answer the questions in the link above.
-* **NO CODING ALLOWED!** Stretch those brain muscles and talk these out with your partner.
-* Writing these out on your table/whiteboard with markers is strongly encouraged.
-
-### Symbols and (Im)mutability (5min)
-
-Symbols are immutable values. That means they contain the same value through the entirety of a program and cannot be changed.
-* Kind of like a string that never changes.
-* Syntax: `variable_name = :symbol_name`
-* No Javascript equivalent.
-
-```
-[36] pry(main)> favorite_animal = :dog
-=> :dog
-[37] pry(main)> puts favorite_animal
-dog
-=> nil
-[38] pry(main)> other_favorite_animal = :killer_whale
-=> :killer_whale
-[39] pry(main)> another_favorite_animal = :"flying squirrel"
-=> :"flying squirrel"
-```
-
-You can convert symbols to -- but not replace them with -- other data types.
-
-```
-[40] pry(main)> favorite_animal = :dog
-=> :dog
-[41] pry(main)> favorite_animal.to_s
-=> "dog"
-[42] pry(main)> favorite_animal = :dog
-=> :dog
-```
-
-When/why would you use symbols?
-* Make sure values that need to be constant stay constant.
-* Enhance performance. Use less memory.
-* Often used as keys in hashes. More on that later this class.
-
-### BREAK (5min)
-
-### Data Collections
-
-#### Arrays (10min)
-
-An ordered collection of related values. Same syntax as Javascript arrays.
-* Square brackets.
-* Values separated by commas.
-* Zero-indexed.
-
-```
-[43] pry(main)> numbers = [ 1, 2, 3 ]
-=> [1, 2, 3]
-[44] pry(main)> animals = [ "dog", "cat", "horse" ]
-=> ["dog", "cat", "horse"]
-[45] pry(main)> animals[0]
-=> "dog"
-[46] pry(main)> animals[1] = "elephant"
-=> "elephant"
-[47] pry(main)> animals
-=> ["dog", "elephant", "horse"]
-```
-
-Another super cool Ruby feature is that you can perform arithmetic operations -- addition, subtraction, multiplication -- on arrays!
-
-```
-[48] pry(main)> numbers = [ 1, 2, 3 ]
-=> [1, 2, 3]
-[49] pry(main)> more_numbers = [ 4, 5, 6, ]
-=> [4, 5, 6]
-[50] pry(main)> lots_of_numbers = numbers + more_numbers
-=> [1, 2, 3, 4, 5, 6]
-[51] pry(main)> lots_of_numbers - [ 4, 5, 6 ]
-=> [1, 2, 3]
-[52] pry(main)> numbers * 3
-=> [1, 2, 3, 1, 2, 3, 1, 2, 3]
-```
-
-##### Array Methods
-
-Ruby is very nice. It provides us with an extensive library of array methods we can use to traverse and manipulate arrays.
-* [Documentation](http://ruby-doc.org/core-2.2.0/Array.html)
-* Can't go over them all, but chances are if you could do it in Javascript then you can do it in Ruby.
-
-###### Push/Pop
-
-These Javascript methods also exist in Ruby and are used the same way.
-
-```
-[53] pry(main)> numbers = [ 1, 2, 3, 4, 5 ]
-=> [1, 2, 3, 4, 5]
-[54] pry(main)> numbers.push( 6 )
-=> [1, 2, 3, 4, 5, 6]
-[55] pry(main)> numbers.push( 7, 8, 9 )
-=> [1, 2, 3, 4, 5, 6, 7, 8, 9]
-[56] pry(main)> numbers.pop
-=> 9
-```
-
-###### Sort
-* Organizes array values from lowest to highest. Numbers and strings.
-
-```
-[57] pry(main)> numbers = [ 3, 1, 5, 2, 4 ]
-=> [3, 1, 5, 2, 4]
-[58] pry(main)> numbers.sort
-=> [1, 2, 3, 4, 5]
-```
-
-###### Delete
-* Removes an argument from an array.
-* If there are multiple instances of that argument, it will delete them all.
-* Look up: `.delete_at()`, `.slice()`
-
-```
-[59] pry(main)> numbers = [ 3, 1, 2, 2, 4 ]
-=> [3, 1, 2, 2, 4]
-[60] pry(main)> numbers.delete( 2 )
-=> 2
-[61] pry(main)> numbers
-=> [3, 1, 4]
-```
-
-###### Shuffle
-
-Q: Who has tried shuffling an array in this class already? What did you have to do?
-* BOOM! Ruby comes with a native array shuffling method.
-
-```
-[62] pry(main)> numbers = [ 1, 2, 3, 4, 5 ]
-=> [1, 2, 3, 4, 5]
-[63] pry(main)> numbers.shuffle
-=> [5, 1, 4, 2, 3]
-```
-
-#### Ranges (2min)
-
-Use ranges to quickly generate arrays of data types.
-* Parentheses.
-* Min and max value, separated by two periods.
-* Generate array using `.to_a` method.
-
-```
-[64] pry(main)> (1..5).to_a
-=> [1, 2, 3, 4, 5]
-[65] pry(main)> ("a".."z").to_a
-=> ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-```
-
-
-#### Hashes (3min)
-
-A unordered, "dictionary-like" collection organized by key-value pairs. Very similar to Javascript objects...
-
-```
-[66] pry(main)> wdi_class = {
-[66] pry(main)*   teacher: "John",  
-[66] pry(main)*   students: [ "Yacko", "Wacko", "Dot" ],  
-[66] pry(main)*   classroom: 2,  
-[66] pry(main)*   in_session: true,  
-[66] pry(main)*   schedule: {  
-[66] pry(main)*     morning: "Ruby Basics",
-[66] pry(main)*     afternoon: "Enumerables"
-[66] pry(main)*   }
-[66] pry(main)* }  
-=> {:teacher=>"John", :students=>["Yacko", "Wacko", "Dot"], :classroom=>2, :in_session=>true, :schedule=>{:morning=>"Ruby Basics", :afternoon=>"Enumerables"}}
-```
-Access
-```
-[66] pry(main)> wdi_class[:teacher]
-=> "John"
-```
-
-Modify
-```ruby
-[67] pry(main)> wdi_class[:teacher] = "Jack"
-=> "Jack"
-```
-
-##### Hash Methods
-
-Like arrays, Ruby also provides us with a library of hash methods.  
-* [Documentation](http://ruby-doc.org/core-2.2.0/Hash.html)
-
-##### Keys
-
-Returns an array with all the keys in a hash.
-
-```
-[68] pry(main)> wdi_class.keys
-=> [:teacher, :students, :classroom, :in_session, :schedule]
-```
-
-##### Merge
-
-Combines two hashes.
-
-```
-[69] pry(main)> classroom = {
-[69] pry(main)*   room: 1  
-[69] pry(main)* }  
-=> {:room=>1}
-[70] pry(main)> locations = {
-[70] pry(main)*   location_one: "DC",  
-[70] pry(main)*   location_two: "NY",  
-[70] pry(main)*   location_three: "Boston"  
-[70] pry(main)* }  
-=> {:location_one=>"DC", :location_two=>"NY", :location_three=>"Boston"}
-[71] pry(main)> silly_hash = classroom.merge( locations )
-=> {:room=>1, :location_one=>"DC", :location_two=>"NY", :location_three=>"Boston"}
-[72] pry(main)> classroom
-=> {:room=>1}
-[73] pry(main)> locations
-=> {:location_one=>"DC", :location_two=>"NY", :location_three=>"Boston"}
-[74] pry(main)> silly_hash
-=> {:room=>1, :location_one=>"DC", :location_two=>"NY", :location_three=>"Boston"}
-```
-
-### BREAK (5min)
-
-### Conditionals (10min)
-
-#### If-Else
+### Conditionals
 
 Pretty similar to Javascript, with some differences.
 * No parentheses or curly brackets required.
@@ -594,9 +365,10 @@ Pretty similar to Javascript, with some differences.
   - This will be used throughout Ruby when dealing with code blocks (e.g., method/function).
 
 Here's an example where we check for height at a roller coaster...
-> In app.rb
 
-```ruby
+```rb
+# In app.rb
+
 puts "Welcome to the Iron Rattler! How tall are you (in feet)?"
 height = gets.chomp
 
@@ -609,29 +381,244 @@ else
 end
 ```
 
-#### Case
+> Ruby also has `case`, the equivalent to Javascript's `switch` statement. If that's more your style, read about it [here](http://www.skorks.com/2009/08/how-a-ruby-case-statement-works-and-what-you-can-do-with-it/).  
 
-Just like Javascript's `switch` statement. Here's an example that displays a certain greeting depending on a language input.
-* Note that the default case begins with `else`
-> in app.rb
+## Data Type Exercises (15 minutes / 0:55)
 
-```ruby
-puts "Hello there! Give me a language: "
-language = gets.chomp.to_s
+Complete the first set of exercises in [this repo](https://github.com/ga-wdi-exercises/ruby-basics-exercises).
 
-case language
-when "spanish"
-  puts "Hola!"
-when "french"
-  puts "Bonjour!"
-when "wookie"
-  puts "URRAAGGARHRHH"
-else
-  puts "I don't know #{language}!"
-end
+If you finish this section early, feel free to try out one of the [Additional Exercises](https://github.com/ga-wdi-lessons/ruby-intro#additional-practice) located at the bottom of the lesson plan.
+
+### Exercise Review (10 minutes / 1:05)
+
+## BREAK (10 minutes / 1:15)
+
+## Data Collections (10 minutes / 1:25)
+
+Read everything up until `Data Collections Exercises`.
+
+### Arrays
+
+An ordered collection of related values. Same syntax as Javascript arrays.
+* Square brackets.
+* Values separated by commas.
+* Zero-indexed.
+
+```rb
+numbers = [ 1, 2, 3 ]
+# => [1, 2, 3]
+
+animals = [ "dog", "cat", "horse" ]
+# => ["dog", "cat", "horse"]
+
+animals[0]
+# => "dog"
+
+animals[1] = "elephant"
+# => "elephant"
+
+animals
+# => ["dog", "elephant", "horse"]
 ```
 
-### Methods (10min)
+Another super cool Ruby feature is that you can perform arithmetic operations -- addition, subtraction, multiplication -- on arrays!
+
+```rb
+numbers = [ 1, 2, 3 ]
+# => [1, 2, 3]
+
+more_numbers = [ 4, 5, 6, ]
+# => [4, 5, 6]
+
+lots_of_numbers = numbers + more_numbers
+# => [1, 2, 3, 4, 5, 6]
+
+lots_of_numbers - [ 4, 5, 6 ]
+# => [1, 2, 3]
+
+numbers * 3
+# => [1, 2, 3, 1, 2, 3, 1, 2, 3]
+```
+
+#### Array Methods
+
+Ruby is very nice. It provides us with an extensive library of array methods we can use to traverse and manipulate arrays.
+* [Documentation](http://ruby-doc.org/core-2.2.0/Array.html)
+* Can't go over them all, but chances are if you could do it in Javascript then you can do it in Ruby.
+
+**IMPORTANT:** You DO NOT need to memorize these. The following is just a sample of array methods available to you. You'll come to be more familiar with these as you need them and look them up in documentation.  
+
+> **tl;dr:** The more you Google them, the better you'll remember them.  
+
+##### Push/Pop
+
+These Javascript methods also exist in Ruby and are used the same way.
+
+```rb
+numbers = [ 1, 2, 3, 4, 5 ]
+# => [1, 2, 3, 4, 5]
+
+numbers.push( 6 )
+# => [1, 2, 3, 4, 5, 6]
+
+numbers.push( 7, 8, 9 )
+# => [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+numbers.pop
+# => 9
+```
+
+##### Sort
+* Organizes array values from lowest to highest. Numbers and strings.
+
+```rb
+numbers = [ 3, 1, 5, 2, 4 ]
+# => [3, 1, 5, 2, 4]
+
+numbers.sort
+# => [1, 2, 3, 4, 5]
+```
+
+##### Delete
+* Removes an argument from an array.
+* If there are multiple instances of that argument, it will delete them all.
+* Look up: `.delete_at()`, `.slice()`
+
+```rb
+numbers = [ 3, 1, 2, 2, 4 ]
+# => [3, 1, 2, 2, 4]
+
+numbers.delete( 2 )
+# => 2
+
+numbers
+# => [3, 1, 4]
+```
+
+**There are a ton of array methods available to us in Ruby.** Explore them using the [Ruby documentation](http://ruby-doc.org/core-1.9.3/Array.html).
+
+### Hashes
+
+A unordered, "dictionary-like" collection organized by key-value pairs. Very similar to Javascript objects...
+
+```rb
+wdi_class = {
+   teacher: "John",  
+   students: [ "Yacko", "Wacko", "Dot" ],  
+   classroom: 2,  
+   in_session: true,  
+   schedule: {  
+     morning: "Ruby Basics",
+     afternoon: "Enumerables"
+   }
+ }  
+# => {:teacher=>"John", :students=>["Yacko", "Wacko", "Dot"], :classroom=>2, :in_session=>true, :schedule=>{:morning=>"Ruby Basics", :afternoon=>"Enumerables"}}
+```
+
+Accessing hash values...  
+
+```rb
+wdi_class[:teacher]
+# => "John"
+```
+> `:teacher` is a data type that is pretty unique to Ruby called a "symbol." We'll learn more about these later in the lesson.  
+
+Modifying hash values...
+
+```rb
+wdi_class[:teacher] = "Jack"
+# => "Jack"
+```
+
+You can also use strings as hash keys.
+
+```rb
+wdi_class = {
+   "teacher" => "John",  
+   "students" => [ "Yacko", "Wacko", "Dot" ],  
+   "classroom" => 2,  
+   "in_session" => true,  
+   "schedule" => {  
+     "morning" => "Ruby Basics",
+     "afternoon" => "Enumerables"
+   }
+}  
+```
+
+> Note the use of `=>` (or "hash rockets") instead of `:` when using strings as keys.  
+
+#### Hash Methods
+
+Like arrays, Ruby also provides us with a library of hash methods.  
+* [Documentation](http://ruby-doc.org/core-2.2.0/Hash.html)
+
+> As mentioned with arrays, do not worry about memorizing these methods. Just know how to look them up should the need arise.  
+
+##### Keys
+
+Returns an array with all the keys in a hash.
+
+```rb
+wdi_class.keys
+# => [:teacher, :students, :classroom, :in_session, :schedule]
+```
+
+##### Merge
+
+Combines two hashes.
+
+```rb
+classroom = {
+ room: 1  
+}  
+# => {:room=>1}
+
+locations = {
+ location_one: "DC",  
+ location_two: "NY",  
+ location_three: "Boston"  
+}  
+# => {:location_one=>"DC", :location_two=>"NY", :location_three=>"Boston"}
+
+silly_hash = classroom.merge( locations )
+# => {:room=>1, :location_one=>"DC", :location_two=>"NY", :location_three=>"Boston"}
+
+classroom
+# => {:room=>1}
+
+locations
+# => {:location_one=>"DC", :location_two=>"NY", :location_three=>"Boston"}
+
+silly_hash
+# => {:room=>1, :location_one=>"DC", :location_two=>"NY", :location_three=>"Boston"}
+```
+
+### Ranges
+
+Use ranges to quickly generate arrays of data types.
+* Parentheses.
+* Min and max value, separated by two periods.
+* Generate array using `.to_a` method.
+
+```rb
+(1..5).to_a
+# => [1, 2, 3, 4, 5]
+
+("a".."z").to_a
+# => ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+```
+
+## Data Collections Exercises (15 minutes / 1:40)
+
+Complete the second set of exercises in [this repo](https://github.com/ga-wdi-exercises/ruby-basics-exercises).
+
+If you finish this section early, feel free to try out one of the [Additional Exercises](https://github.com/ga-wdi-lessons/ruby-intro#additional-practice) located at the bottom of the lesson plan.
+
+### Exercise Review (10 minutes / 1:50)
+
+## BREAK (5 minutes / 1:55)
+
+## Methods (10 minutes / 2:05)
 
 The equivalent of Javascript "functions."
 * Many things are referred to as "methods" in Ruby. Right now, we'll be talking about methods that are not attached to an object (e.g., array, hash).
@@ -642,16 +629,18 @@ Components
 * `number` - the argument name in the below example
 * `end` - closes the method
 
-```
-[75] pry(main)> def double( number )
-[75] pry(main)*   doubled_number = number * 2  
-[75] pry(main)*   return doubled_number  
-[75] pry(main)* end  
-=> :double
-[76] pry(main)> double( 3 )
-=> 6
-[77] pry(main)> double 3
-=> 6
+```rb
+def double( number )
+  doubled_number = number * 2  
+  return doubled_number  
+end  
+# => :double
+
+double( 3 )
+# => 6
+
+double 3
+# => 6
 ```
 
 You may have noticed that we use the same `return` notation as Javascript. This is called an **explicit return**, because we identify what exactly we want returned from the function.  
@@ -659,46 +648,53 @@ You may have noticed that we use the same `return` notation as Javascript. This 
 Ruby also lets us make **implicit returns**. This means that when we do not use the `return` keyword, Ruby will automatically return the value of the last line of code in the method.
 * We encourage you to use **explicit returns** so we know exactly what your method is returning.
 
-```
-[78] pry(main)> def double( number )
-[78] pry(main)*   doubled_number = number * 2  
-[78] pry(main)*   doubled_number  
-[78] pry(main)* end  
-=> :double
-[79] pry(main)> double( 3 )
-=> 6
-[80] pry(main)> double 3
-=> 6
+```rb
+def double( number )
+  doubled_number = number * 2  
+  doubled_number  
+end  
+# => :double
+
+double( 3 )
+# => 6
+
+double 3
+# => 6
 ```
 
 Ruby methods can also establish default argument values.
 * In the below example, if we do not provide our `double` method with an argument, it will default to 5.
 
-```
-[81] pry(main)> def double( number=5 )
-[81] pry(main)*   doubled_number = number * 2  
-[81] pry(main)*   puts "Your doubled number is #{doubled_number}"  
-[81] pry(main)*   doubled_number  
-[81] pry(main)* end  
-=> :double
-[82] pry(main)> double
-Your doubled number is 10
-=> 10
+```rb
+def double( number=5 )
+  doubled_number = number * 2  
+  puts "Your doubled number is #{doubled_number}"  
+  doubled_number  
+end  
+# => :double
+
+double
+# Your doubled number is 10
+# => 10
 ```
 
-### Exercise: Temperature Converter (Part II) (30min)
+## Exercise: Temperature Converter (20 minute / 2:25)
 
 [Temperature Converter (Ruby)](https://github.com/ga-dc/temperature_converter_ruby)
 
+## Closing (5 minutes / 2:30)
 
-## Closing
-
-What makes Ruby so awesome, what do you like about it? How would you compare it to Javascript at this point?
-
-Review Learning Objectives
+### Review Learning Objectives
 
 ## Resources
 * [Chris Pine's Learn to Program](https://pine.fm/LearnToProgram/chap_00.html)
 * [Ruby Monk](https://rubymonk.com/)
 * [Why's Poignant Guide to Ruby](http://poignant.guide/book/chapter-2.html)
 * [Ruby Koans](http://rubykoans.com/)
+
+## Additional Practice
+* [Word Ladder](https://github.com/ga-wdi-exercises/word_ladder)
+* [Who Won The Election?](https://github.com/ga-wdi-exercises/who_won_the_election)
+* [Search For Obi-Wan](https://github.com/ga-wdi-exercises/search_for_obi_wan)
+* [Pig-Latin](https://github.com/ga-wdi-exercises/pig_latin)
+* [Letter Counter](https://github.com/ga-wdi-exercises/letter_counter)
