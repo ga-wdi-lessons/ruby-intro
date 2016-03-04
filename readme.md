@@ -370,7 +370,7 @@ Here's an example where we check for height at a roller coaster...
 # In app.rb
 
 puts "Welcome to the Iron Rattler! How tall are you (in feet)?"
-height = gets.chomp
+height = gets.chomp.to_i
 
 if height < 4
   puts "Sorry, you'll fly out of your seat if we let you on."
