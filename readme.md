@@ -270,6 +270,7 @@ puts "I am teaching WDI " + class_number
 
 In cases like the above, you either need to convert the variable to a string using `.to_s` OR use something called "interpolation."
 * Surround the non-string variable with a hashtag and curly brackets: `#{variable}`
+* No Javascript equivalent ([until ES6 came along! - string interpolation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals).
 
 ```rb
 class_number = 984
@@ -285,7 +286,7 @@ puts "I am teaching WDI #{class_number}"
 Symbols are, for our current purposes, lightweight strings.
 * Kind of like a string that never changes.
 * Syntax: `variable_name = :symbol_name`
-* No Javascript equivalent ([until ES6 came along!](http://www.2ality.com/2014/12/es6-symbols.html)).
+* No Javascript equivalent ([until ES6 came along! - symbols](http://www.2ality.com/2014/12/es6-symbols.html)).
 
 ```rb
 favorite_animal = :dog
@@ -674,11 +675,12 @@ double
 
 [Temperature Converter (Ruby)](https://github.com/ga-dc/temperature_converter_ruby)
 
-## Closing (5 minutes / 2:30)
+## Exit Ticket (3 min)
 
-### Review Learning Objectives
+Before you leave, plase take ~3 minutes to complete [this exit ticket.](https://docs.google.com/forms/d/1d03NYFphG6m7yAMUY1OlnJZMQWof7Rt6b5MX3Xn4ZPs/viewform)
 
 ## Resources
+* [Learn X in Y minutes: Ruby](https://learnxinyminutes.com/docs/ruby/)
 * [Chris Pine's Learn to Program](https://pine.fm/LearnToProgram/chap_00.html)
 * [Ruby Monk](https://rubymonk.com/)
 * [Why's Poignant Guide to Ruby](http://poignant.guide/book/chapter-2.html)
