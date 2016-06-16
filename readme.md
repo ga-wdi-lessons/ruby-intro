@@ -687,6 +687,14 @@ double
 
 [Temperature Converter (Ruby)](https://github.com/ga-dc/temperature_converter_ruby)
 
+## Questions
+
+* What are Ruby's 5 main data types?
+* Describe the difference between what is truthy/falsey in Ruby vs JavaScript?
+* What's the difference between explicit and implicit return?
+* How would you add a key / value pair to an existing hash?
+* How many values can a method return? Which methods don't return anything?
+
 ## Resources
 * [Learn X in Y minutes: Ruby](https://learnxinyminutes.com/docs/ruby/)
 * [Chris Pine's Learn to Program](https://pine.fm/LearnToProgram/chap_00.html)
