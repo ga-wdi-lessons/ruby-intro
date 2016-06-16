@@ -62,7 +62,7 @@ Check to make sure you have Ruby installed: `$ ruby -v`
 $ touch app.rb        # Create a Ruby file
 $ ruby file_name.rb   # Run that ruby file
 ```
-> Note the `.rb` file extension.
+> This is the equivalent of running `node script.js` in the Terminal.
 
 #### PRY (REPL)
 
@@ -686,10 +686,6 @@ double
 ## Exercise: Temperature Converter (20 minute / 2:25)
 
 [Temperature Converter (Ruby)](https://github.com/ga-dc/temperature_converter_ruby)
-
-## Exit Ticket (3 min)
-
-Before you leave, plase take ~3 minutes to complete [this exit ticket.](https://docs.google.com/forms/d/1d03NYFphG6m7yAMUY1OlnJZMQWof7Rt6b5MX3Xn4ZPs/viewform)
 
 ## Resources
 * [Learn X in Y minutes: Ruby](https://learnxinyminutes.com/docs/ruby/)
