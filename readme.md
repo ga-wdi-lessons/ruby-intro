@@ -176,7 +176,7 @@ How old are you?:
 
 ### Data Types (15 minutes / 0:40)
 
-Spend 15 minutes reading through everything up until `Data Types Exercises`.  
+Spend 15 minutes reading through everything up until [Data Types Exercises](https://github.com/ga-wdi-lessons/ruby-intro/tree/master#data-type-exercises-15-minutes--055).  
 
 #### Why do we have to read all this ourselves?
 
@@ -334,7 +334,6 @@ Comparisons in Ruby are nearly identical to Javascript
 > Don't worry about `===` in Ruby for now. It [does not](http://mauricio.github.io/2011/05/30/ruby-basics-equality-operators-ruby.html) have the same application as in Javascript.  
 
 "Truthiness" and "falsiness" are a lot less complicated in Ruby.
-* **BOARD:** What values were "falsey" in Javascript?
 * The only falsey values in Ruby are `nil` and `false`.
 
 #### Nil
@@ -400,7 +399,7 @@ If you finish this section early, feel free to try out one of the [Additional Ex
 
 ## Data Collections (10 minutes / 1:25)
 
-Read everything up until `Data Collections Exercises`.
+Read everything up until [Data Collections Exercises](https://github.com/ga-wdi-lessons/ruby-intro/tree/master#data-collections-exercises-15-minutes--140).
 
 ### Arrays
 
