@@ -1,24 +1,14 @@
-# wdi_class = {
-#    TEACHER: "John",
-#    STUDENTS: [ "Yacko", "Wacko", "Dot" ],
-#    CLASSROOM: 2,
-#  }
-#
-# puts wdi_class[TEACHER]
+wdi_class = {
+   "teacher" => "John",
+   "students" => [ "Yacko", "Wacko", "Dot" ],
+   "classroom" => 2,
+   "in_session" => true,
+   "schedule" => {
+     "morning" => "Ruby Basics",
+     "afternoon" => "Enumerables"
+   }
+}
 
-# PI = 3.14
-#
-# puts PI
-#
-# PI = "hello"
-#
-# puts PI
+puts wdi_class["teacher"] = "Jack"
 
-
-favorite_animal = :dog
-
-puts favorite_animal
-
-favorite_animal = :cat
-
-puts favorite_animal
+puts wdi_class
