@@ -333,6 +333,13 @@ something = nil
 something.nil?
 # => true
 ```
+
+## Data Type Exercises (15 minutes)
+
+Complete the first set of exercises in [this repo](https://github.com/ga-wdi-exercises/ruby-basics-exercises).
+
+If you finish this section early, feel free to try out one of the [Additional Exercises](https://github.com/ga-wdi-lessons/ruby-intro#additional-practice) located at the bottom of the lesson plan.
+
 #### Retrieving Memory Location
 
 We can use the `.object_id` method to demonstrate that two variables are pointing to the same object.
@@ -429,20 +436,13 @@ else
   puts "If you value your head, you should not get on this ride."
 end
 ```
+## Ruby Variables Exercise (15 minutes)
 
-## Data Type Exercises (15 minutes / 0:55)
+Test out what you just learned with this [Ruby variables quiz](https://github.com/ga-wdi-exercises/ruby_vars_quiz)
 
-Complete the first set of exercises in [this repo](https://github.com/ga-wdi-exercises/ruby-basics-exercises).
-
-If you finish this section early, feel free to try out one of the [Additional Exercises](https://github.com/ga-wdi-lessons/ruby-intro#additional-practice) located at the bottom of the lesson plan.
-
-### Exercise Review (10 minutes / 1:05)
-
-## BREAK (10 minutes / 1:15)
+### BREAK (10 minutes / 1:15)
 
 ## Data Collections (10 minutes / 1:25)
-
-Read everything up until [Data Collections Exercises](https://github.com/ga-wdi-lessons/ruby-intro/tree/master#data-collections-exercises-15-minutes--140).
 
 ### Arrays
 
@@ -629,7 +629,7 @@ wdi_class.keys
 
 ##### Merge
 
-Combines two hashes. Note: If both of your hashes have the same key, the one in the hash you set as the argument in the parameters will take precedence.
+Combines two hashes. If both of your hashes have the same key, the one in the hash you set as the argument in the parameters will take precedence.
 
 ```rb
 classroom = {
