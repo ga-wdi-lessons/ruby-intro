@@ -340,6 +340,8 @@ Complete the first set of exercises in [this repo](https://github.com/ga-wdi-exe
 
 If you finish this section early, feel free to try out one of the [Additional Exercises](https://github.com/ga-wdi-lessons/ruby-intro#additional-practice) located at the bottom of the lesson plan.
 
+## Data (Im)mutability
+
 #### Retrieving Memory Location
 
 We can use the `.object_id` method to demonstrate that two variables are pointing to the same object.
