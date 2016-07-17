@@ -687,7 +687,9 @@ If you finish this section early, feel free to try out one of the [Additional Ex
 * Because Ruby is purely an object-oriented language--that is, as we stated before, everything in ruby is an object--there is no distinction between functions and methods. Under the hood, even seemingly stand-alone functions are in fact associated with an object. The convention, however, is to call these functions. Don't worry yet about the syntax here--we'll go over that next.
 
 ```rb
-> def hello; puts "hi"; end
+> def hello
+    puts "hi"
+  end
 #=> :hello
 > method(:hello)
 # => #<Method: Object#hello>
@@ -701,7 +703,10 @@ Components
 * `end` - closes the method
 
 ```rb
-def double( number ); doubled_number = number * 2; return doubled_number; end  
+def double( number )
+   doubled_number = number * 2
+   return doubled_number
+end  
 
 double( 3 )
 # => 6
