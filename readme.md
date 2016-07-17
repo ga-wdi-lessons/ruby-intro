@@ -444,7 +444,7 @@ Test out what you just learned with this [Ruby variables quiz](https://github.co
 
 ## Data Collections (10 minutes / 1:25)
 
-Read everything up until Data Collections Exercises.
+Read everything up until [Data Collections Exercises](https://github.com/ga-wdi-lessons/ruby-intro/tree/master#data-collections-exercises-15-minutes--140).
 
 ### Arrays
 
