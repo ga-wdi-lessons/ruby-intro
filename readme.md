@@ -444,6 +444,8 @@ Test out what you just learned with this [Ruby variables quiz](https://github.co
 
 ## Data Collections (10 minutes / 1:25)
 
+Read everything up until Data Collections Exercises.
+
 ### Arrays
 
 An ordered collection of related values. Same syntax as Javascript arrays.
