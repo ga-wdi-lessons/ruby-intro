@@ -294,35 +294,6 @@ puts "I am teaching WDI #{class_number}"
 # => nil
 ```
 
-##### Symbols
-
-Symbols are, for our current purposes, lightweight strings.
-* Kind of like a string that never changes.
-* Syntax: `variable_name = :symbol_name`
-* No Javascript equivalent [(until ES6 came along!)](http://www.2ality.com/2014/12/es6-symbols.html)).
-
-```rb
-favorite_animal = :dog
-# => :dog
-
-puts favorite_animal
-# dog
-# => nil
-
-other_favorite_animal = :killer_whale
-# => :killer_whale
-
-another_favorite_animal = :"flying squirrel"
-# => :"flying squirrel"
-```
-
-When/why would you use symbols?
-* Most common use is as keys in hashes (the Ruby equivalent of objects -- more on that later).
-* Make sure values that need to be constant stay constant.
-* Enhance performance. Use less memory.
-
-> There is A LOT more to symbols. We'll covering these along with data immutability in greater length during a mini-lesson.  
-
 #### Booleans
 
 Still `true` and `false`.
@@ -393,7 +364,7 @@ b.object_id
 
 #### The Bang Symbol (`!`)
 
-All of the Ruby data types we have discussed so far -- with the exception of symbols and numbers -- are mutable.
+All of the Ruby data types we have discussed so far are mutable.
 * We can not only change what variables are pointing to in memory, but we can directly modify those values stored in memory as well.
 
 Methods with an `!` attached to the end of them usually mean that they will modify the value in memory they are being called on.
@@ -412,6 +383,26 @@ b.upcase!
 a
 # => "CHEESEBURGER"
 ```
+##### Symbols
+
+Symbols are immutable values. That means they contain the same value through the entirety of a program and cannot be changed.
+* Kind of like a string that never changes.
+* Syntax: `variable_name = :symbol_name`
+* No Javascript equivalent [(until ES6 came along!)](http://www.2ality.com/2014/12/es6-symbols.html)).
+
+```rb
+favorite_animal = :dog
+# => :dog
+
+favorite_animal.upcase!
+# NoMethodError: undefined method `upcase!' for :dog:Symbol
+# Did you mean?  upcase
+```
+
+When/why would you use symbols?
+* Most common use is as keys in hashes (the Ruby equivalent of objects -- more on that later).
+* Make sure values that need to be constant stay constant.
+* Enhance performance. Use less memory.
 
 
 ### Conditionals
