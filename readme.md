@@ -95,9 +95,9 @@ my_favorite_animal = "flying squirrel"
 ```
 
 Although we don't use `var`, there is still syntax to designate whether a variable is local or global.
-* Nothing implies `local` (e.g., `my_number`)
 * `$` makes it global (e.g., `$my_number`)
-* All-caps makes it a constant (e.g., `PI = 3.14`)
+* Undesignated implies `local` (e.g., `my_number`)
+* All-caps makes it a constant. That is, the variable can't be changed (e.g., `PI = 3.14`)
 
 
 #### No Semicolons!
@@ -127,7 +127,7 @@ end
 
 #### `puts` and `gets`
 
-`puts` is the equivalent of Javascripts `console.log()`.
+`puts` is the equivalent of Javascript's `console.log()`.
 
 ```rb
 puts "Hello, Ruby!"
@@ -245,7 +245,7 @@ puts full_name
 # => nil
 ```
 
-Not only can you concatenate strings, now you can multiply them too!
+Not only can you concatenate strings, now you can multiply them too! Remember we couldn't do that in Javascript?
 
 ```rb
 # Concatenation
@@ -262,11 +262,11 @@ Not only can you concatenate strings, now you can multiply them too!
 Sometimes you will want to print out a string that incorporates a variable. For example...
 
 ```rb
-my_name = "Adrian"
-# => "Adrian"
+my_name = "Nayana"
+# => "Nayana"
 
 puts "Hi my name is: " + my_name
-# Hi my name is: Adrian
+# Hi my name is: Nayana
 # => nil
 ```
 
@@ -281,8 +281,8 @@ puts "I am teaching WDI " + class_number
 ```
 
 In cases like the above, you either need to convert the variable to a string using `.to_s` or use something called "interpolation."
-* Surround the non-string variable with a hashtag and curly brackets: `#{variable}`
-* No Javascript equivalent ([until ES6 came along!](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals).
+* Surround the non-string variable with a hashtag and curly brackets: `#{variable}`. Note: If you choose this option, you must use double quotes otherwise the interpolation will not work.
+* No Javascript equivalent [(until ES6 came along!)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals).
 
 ```rb
 class_number = 984
@@ -298,7 +298,7 @@ puts "I am teaching WDI #{class_number}"
 Symbols are, for our current purposes, lightweight strings.
 * Kind of like a string that never changes.
 * Syntax: `variable_name = :symbol_name`
-* No Javascript equivalent ([until ES6 came along!](http://www.2ality.com/2014/12/es6-symbols.html)).
+* No Javascript equivalent [(until ES6 came along!)](http://www.2ality.com/2014/12/es6-symbols.html)).
 
 ```rb
 favorite_animal = :dog
@@ -327,11 +327,13 @@ When/why would you use symbols?
 Still `true` and `false`.
 * We'll be using them in conditionals and comparisons just like in Javascript.
 
-Comparisons in Ruby are nearly identical to Javascript
-* `!=`, `&&`, `||`
-* `<`, `>`, `<=`, `>=`, `==`
+Comparison operators in Ruby are nearly identical to Javascript. However, the check for equality is always for both value and data type.
+* `<`, `>`, `<=`, `>=`, `==`, `!=`
 
 > Don't worry about `===` in Ruby for now. It [does not](http://mauricio.github.io/2011/05/30/ruby-basics-equality-operators-ruby.html) have the same application as in Javascript.  
+
+Logical operators are also similar.
+* `!`, `&&`, `||`
 
 "Truthiness" and "falsiness" are a lot less complicated in Ruby.
 * The only falsey values in Ruby are `nil` and `false`.
@@ -384,8 +386,6 @@ else
   puts "If you value your head, you should not get on this ride."
 end
 ```
-
-> Ruby also has `case`, the equivalent to Javascript's `switch` statement. If that's more your style, read about it [here](http://www.skorks.com/2009/08/how-a-ruby-case-statement-works-and-what-you-can-do-with-it/).  
 
 ## Data Type Exercises (15 minutes / 0:55)
 
@@ -470,6 +470,9 @@ numbers.push( 7, 8, 9 )
 
 numbers.pop
 # => 9
+
+numbers
+# => [1, 2, 3, 4, 5]
 ```
 
 ##### Sort
@@ -569,7 +572,7 @@ wdi_class.keys
 
 ##### Merge
 
-Combines two hashes.
+Combines two hashes. Note: If both of your hashes have the same key, the one in the hash you set as the argument in the parameters will take precedence.
 
 ```rb
 classroom = {
@@ -624,8 +627,15 @@ If you finish this section early, feel free to try out one of the [Additional Ex
 
 ## Methods (10 minutes / 2:05)
 
-The equivalent of Javascript "functions."
-* Many things are referred to as "methods" in Ruby. Right now, we'll be talking about methods that are not attached to an object (e.g., array, hash).
+* Because Ruby is purely an object-oriented language--that is, as we stated before, everything in ruby is an object--there is no distinction between functions and methods. Under the hood, even seemingly stand-alone functions are in fact associated with an object. The convention, however, is to call these functions. Don't worry yet about the syntax here--we'll go over that next.
+
+```rb
+> def hello; puts "hi"; end
+#=> :hello
+> method(:hello)
+# => #<Method: Object#hello>
+```
+
 
 Components
 * `def` - the Ruby equivalent of `function`
@@ -634,11 +644,7 @@ Components
 * `end` - closes the method
 
 ```rb
-def double( number )
-  doubled_number = number * 2  
-  return doubled_number  
-end  
-# => :double
+def double( number ); doubled_number = number * 2; return doubled_number; end  
 
 double( 3 )
 # => 6
