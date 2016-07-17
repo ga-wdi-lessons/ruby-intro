@@ -684,17 +684,7 @@ If you finish this section early, feel free to try out one of the [Additional Ex
 
 ## Methods (10 minutes / 2:05)
 
-* Because Ruby is purely an object-oriented language--that is, as we stated before, everything in ruby is an object--there is no distinction between functions and methods. Under the hood, even seemingly stand-alone functions are in fact associated with an object. The convention, however, is to call these functions. Don't worry yet about the syntax here--we'll go over that next.
-
-```rb
-> def hello
-    puts "hi"
-  end
-#=> :hello
-> method(:hello)
-# => #<Method: Object#hello>
-```
-
+* As stated before, everything in Ruby is an object so there is no distinction in this language between functions and methods. Under the hood, even seemingly stand-alone functions are in fact associated with an object. The convention, however, is to call these methods.
 
 Components
 * `def` - the Ruby equivalent of `function`
