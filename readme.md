@@ -340,7 +340,7 @@ Complete the first set of exercises in [this repo](https://github.com/ga-wdi-exe
 
 If you finish this section early, feel free to try out one of the [Additional Exercises](https://github.com/ga-wdi-lessons/ruby-intro#additional-practice) located at the bottom of the lesson plan.
 
-### Variables and Mutability 
+### Variables and Mutability
 
 Let's talk about variables and memory allocation in Ruby.
 
@@ -586,8 +586,7 @@ Accessing hash values...
 ```rb
 wdi_class[:teacher]
 # => "John"
-```
-> `:teacher` is a data type that is pretty unique to Ruby called a "symbol." We'll learn more about these later in the lesson.  
+``` 
 
 Modifying hash values...
 
