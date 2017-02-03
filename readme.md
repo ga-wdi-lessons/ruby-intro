@@ -52,8 +52,8 @@ We will be running Ruby code via the Terminal in two different ways. But first, 
 ### Setting Up Ruby
 
 Check to make sure you have Ruby installed: `$ ruby -v`
-* Should get back something like: `ruby 2.2.1p85 (2015-02-26 revision 49769) [x86_64-darwin14]`
-* If you need to install: `$ rvm install 2.2`
+* Should get back something like: `ruby 2.4.0p0 (2016-12-24 revision 57164) [x86_64-darwin16]`
+* If you need to install: `$ rvm install 2.4`
 
 ### Running Ruby
 
@@ -78,6 +78,8 @@ Just like Javascript and the browser console, we can use tools like Pry and IRB 
 ### Ruby vs. Javascript: Differences in Syntax (10 minutes / 0:25)
 
 #### Turn And Talk (2 minutes)
+
+Think back to the [Try Ruby homework you completed over the weekend](https://github.com/ga-wdi-exercises/try-ruby)./
 
 With a partner, write down some differences in syntax, "nice" or otherwise, you noticed between Ruby and Javascript?
 
@@ -506,7 +508,7 @@ numbers * 3
 #### Array Methods
 
 Ruby is very nice. It provides us with an extensive library of array methods we can use to traverse and manipulate arrays.
-* [Documentation](http://ruby-doc.org/core-2.2.0/Array.html)
+* [Documentation](http://ruby-doc.org/core-.0/Array.html)
 * Can't go over them all, but chances are if you could do it in Javascript then you can do it in Ruby.
 
 **IMPORTANT:** You DO NOT need to memorize these. The following is just a sample of array methods available to you. You'll come to be more familiar with these as you need them and look them up in documentation.  
@@ -586,7 +588,7 @@ Accessing hash values...
 ```rb
 wdi_class[:teacher]
 # => "John"
-``` 
+```
 
 Modifying hash values...
 
@@ -629,7 +631,7 @@ wdi_class["teacher"] = "Jack"
 #### Hash Methods
 
 Like arrays, Ruby also provides us with a library of hash methods.  
-* [Documentation](http://ruby-doc.org/core-2.2.0/Hash.html)
+* [Documentation](http://ruby-doc.org/core-2.4.0/Hash.html)
 
 > As mentioned with arrays, do not worry about memorizing these methods. Just know how to look them up should the need arise.  
 
