@@ -17,7 +17,7 @@
 
 ## What is Ruby? (5 minutes / 0:05)
 
-We've been living in the client-side world of development thus far, running javascript in our browser. Fullstack developers work not just with a front-end, like we've done up until now, but with the back-end, aka a server. Ruby is a **server-side** programming language.  
+We've been living in the client-side world of development thus far, running javascript in our browser. Fullstack developers work not just with a front-end, like we've done up until now, but with the back-end, aka a server. Ruby is a **server-side** programming language. Learning Ruby will get us in the door of the world of server-side programming.
 
 ![Client-Server Model](http://i.imgur.com/AfiaMQP.png)  
 
