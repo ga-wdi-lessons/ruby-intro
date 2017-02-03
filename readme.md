@@ -17,7 +17,7 @@
 
 ## What is Ruby? (5 minutes / 0:05)
 
-Ruby is a **server-side** programming language.  
+We've been living in the client-side world of development thus far, running javascript in our browser. Fullstack developers work not just with a front-end, like we've done up until now, but with the back-end, aka a server. Ruby is a **server-side** programming language. Learning Ruby will get us in the door of the world of server-side programming.
 
 ![Client-Server Model](http://i.imgur.com/AfiaMQP.png)  
 
@@ -79,7 +79,7 @@ Just like Javascript and the browser console, we can use tools like Pry and IRB 
 
 #### Turn And Talk (2 minutes)
 
-Think back to the [Try Ruby homework you completed over the weekend](https://github.com/ga-wdi-exercises/try-ruby)./
+Think back to the [Try Ruby homework you completed over the weekend](https://github.com/ga-wdi-exercises/try-ruby).
 
 With a partner, write down some differences in syntax, "nice" or otherwise, you noticed between Ruby and Javascript?
 
@@ -179,7 +179,7 @@ How old are you?:
 
 ### Data Types (15 minutes / 0:40)
 
-Spend 15 minutes reading through everything up until [Data Types Exercises](https://github.com/ga-wdi-lessons/ruby-intro/tree/master#data-type-exercises-15-minutes--055).  
+Spend 15 minutes reading through everything up until the next section, **Data Types Exercises**.  
 
 #### Why do we have to read all this ourselves?
 
@@ -336,6 +336,8 @@ something.nil?
 # => true
 ```
 
+> #### Stop Here, end of section
+
 ## Data Type Exercises (15 minutes)
 
 Complete the first set of exercises in [this repo](https://github.com/ga-wdi-exercises/ruby-basics-exercises).
@@ -350,11 +352,16 @@ Haha!
 
 ![XKCD pointers comic](https://camo.githubusercontent.com/e015a8e243f53ffecd9b18fc5c8d770dde1948cc/687474703a2f2f626c6f672e70726f7465637465647374617469632e636f6d2f77702d636f6e74656e742f75706c6f6164732f323030372f30352f706f696e746572732e706e67)
 
-Why is that so funny? Because variables are pointers to values in memory.
+Why is that so "funny"? Pointers are like addresses for things stored in memory (RAM).
+
+Variables create a namespace, or give a name to, that address.
+
 
 ![Variables in memory diagram](https://camo.githubusercontent.com/62b04af497f124fc9b11ec3802d73497f5c9e305/687474703a2f2f64326177357865326a6c647175652e636c6f756466726f6e742e6e65742f626f6f6b732f727562792f696d616765732f7661726961626c65735f706f696e74657273312e6a7067)
 
 <a href="https://imgflip.com/gif/t9736"><img src="https://i.imgflip.com/t9736.gif" title="made at imgflip.com"/></a>
+
+
 
 #### Retrieving Memory Location
 
@@ -387,10 +394,13 @@ b.object_id
 
 #### The Bang Symbol (`!`)
 
+The bang is simply a modifier for Ruby methods, meaning that it changes how the method operates.
+
 All of the Ruby data types we have discussed so far are mutable.
 * We can not only change what variables are pointing to in memory, but we can directly modify those values stored in memory as well.
 
-Methods with an `!` attached to the end of them usually mean that they will modify the value in memory they are being called on.
+Methods with an `!` attached to the end of them usually mean that they will modify the value in memory they are being called on. Methods are called `mutator methods` when they change the value of the variable they are called upon.
+
 * Things can get tricky when you have multiple variables pointing at the same value. For example...
 
 ```rb
@@ -454,7 +464,7 @@ end
 ```
 ## Ruby Variables Exercise (15 minutes)
 
-Test out what you just learned with this [Ruby variables quiz](https://github.com/ga-wdi-exercises/ruby_vars_quiz)
+Test out what you just learned with this [Ruby variables exercise](https://github.com/ga-wdi-exercises/ruby_vars_exercise)
 
 ### BREAK (10 minutes / 1:15)
 
