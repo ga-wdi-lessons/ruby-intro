@@ -79,7 +79,7 @@ Just like Javascript and the browser console, we can use tools like Pry and IRB 
 
 #### Turn And Talk (2 minutes)
 
-Think back to the [Try Ruby homework you completed over the weekend](https://github.com/ga-wdi-exercises/try-ruby)./
+Think back to the [Try Ruby homework you completed over the weekend](https://github.com/ga-wdi-exercises/try-ruby).
 
 With a partner, write down some differences in syntax, "nice" or otherwise, you noticed between Ruby and Javascript?
 
@@ -179,7 +179,7 @@ How old are you?:
 
 ### Data Types (15 minutes / 0:40)
 
-Spend 15 minutes reading through everything up until [Data Types Exercises](https://github.com/ga-wdi-lessons/ruby-intro/tree/master#data-type-exercises-15-minutes--055).  
+Spend 15 minutes reading through everything up until the **Data Types Exercises** section below this one.  
 
 #### Why do we have to read all this ourselves?
 
@@ -336,7 +336,7 @@ something.nil?
 # => true
 ```
 
-## Data Type Exercises (15 minutes)
+## Data Types Exercises (15 minutes)
 
 Complete the first set of exercises in [this repo](https://github.com/ga-wdi-exercises/ruby-basics-exercises).
 
@@ -454,7 +454,7 @@ end
 ```
 ## Ruby Variables Exercise (15 minutes)
 
-Test out what you just learned with this [Ruby variables quiz](https://github.com/ga-wdi-exercises/ruby_vars_quiz)
+Test out what you just learned with this [Ruby variables exercise](https://github.com/ga-wdi-exercises/ruby_vars_exercise)
 
 ### BREAK (10 minutes / 1:15)
 
