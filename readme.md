@@ -79,7 +79,7 @@ Just like Javascript and the browser console, we can use tools like Pry and IRB 
 
 ### Turn And Talk (2 minutes)
 
-Think back to the [Try Ruby homework you completed over the weekend](https://github.com/ga-wdi-exercises/try-ruby).
+Think back to the [Try Ruby homework you just completed](https://github.com/ga-wdi-exercises/try-ruby).
 
 With a partner, write down some differences in syntax, "nice" or otherwise, you noticed between Ruby and Javascript?
 
