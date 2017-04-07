@@ -179,7 +179,7 @@ How old are you?:
 
 ## You Do: Data Types (15 minutes / 0:40)
 
-Spend 15 minutes reading through everything up until the **[Data Types Exercises](#data-types-exercises-15-minutes)** section below this one.
+Spend 15 minutes reading through everything up until the **[Data Types Exercises](#you-do-data-types-exercises-15-minutes)** section below this one.
 
 #### Why do we have to read all this ourselves?
 
@@ -460,7 +460,7 @@ Test out what you just learned with this [Ruby variables exercise](https://githu
 
 ## You Do: Data Collections (10 minutes / 1:25)
 
-Read everything up until the [Data Collections Exercises](#data-types-exercises-15-minutes) section below this one.
+Read everything up until the [Data Collections Exercises](#you-do-data-collections-exercises-15-minutes--140) section below this one.
 
 ### Arrays
 
