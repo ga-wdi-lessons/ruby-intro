@@ -179,7 +179,7 @@ How old are you?:
 
 ## You Do: Data Types (15 minutes / 0:40)
 
-Spend 15 minutes reading through everything up until the **[Data Types Exercises](#data-types-exercises-15-minutes)** section below this one.
+Spend 15 minutes reading through everything up until the **[Data Types Exercises](#you-do-data-types-exercises)** section below this one.
 
 #### Why do we have to read all this ourselves?
 
@@ -336,13 +336,13 @@ something.nil?
 # => true
 ```
 
-## You Do: Data Types Exercises (15 minutes)
+### You Do: Data Types Exercises
 
 Complete the first set of exercises (Exercise I: Data Types) in [this repo](https://github.com/ga-wdi-exercises/ruby-basics-exercises).
 
 If you finish this section early, feel free to try out one of the [Additional Exercises](https://github.com/ga-wdi-lessons/ruby-intro#additional-practice) located at the bottom of the lesson plan.
 
-## Variables and Mutability
+## Variables and Mutability (10 minutes / 0:50)
 
 Let's talk about variables and memory allocation in Ruby.
 
@@ -452,7 +452,7 @@ else
   puts "If you value your head, you should not get on this ride."
 end
 ```
-## You Do: Ruby Variables Exercise (15 minutes)
+### You Do: Ruby Variables Exercise (15 minutes / 1:05)
 
 Test out what you just learned with this [Ruby variables exercise](https://github.com/ga-wdi-exercises/ruby_vars_exercise)
 
@@ -460,7 +460,7 @@ Test out what you just learned with this [Ruby variables exercise](https://githu
 
 ## You Do: Data Collections (10 minutes / 1:25)
 
-Read everything up until the [Data Collections Exercises](#data-types-exercises-15-minutes) section below this one.
+Read everything up until the [Data Collections Exercises](#you-do-data-collections-exercises-15-minutes--140) section below this one.
 
 ### Arrays
 
@@ -689,7 +689,7 @@ Use ranges to quickly generate arrays of data types.
 # => ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 ```
 
-## You Do: Data Collections Exercises (15 minutes / 1:40)
+### You Do: Data Collections Exercises (15 minutes / 1:40)
 
 Complete the second set of exercises (Exercise II: Data Collections) in [this repo](https://github.com/ga-wdi-exercises/ruby-basics-exercises).
 
