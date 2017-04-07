@@ -460,7 +460,7 @@ Test out what you just learned with this [Ruby variables exercise](https://githu
 
 ## You Do: Data Collections (10 minutes / 1:25)
 
-Read everything up until the [Data Collections Exercises](#you-do-data-collections-exercises) section below this one.
+Read everything up until the [Data Collections Exercises](#you-do-data-collections-exercises-15-minutes--140) section below this one.
 
 ### Arrays
 
