@@ -25,16 +25,16 @@ Ruby is a **server-side** programming language, meaning it resides in and is pro
 
 What is a server?
 * It gathers information from the database, filters it using logic and from that generates something to send back to the user. That could be HTML or, in the case of an API, JSON.
-* That means you **cannot** look at or mess with a site's server-side code as you did with Javascript via the browser console.
+* That means you cannot look at or mess with a site's server-side code as you did with Javascript via the browser console
 * We won't be including Ruby files in our HTML documents. You'll learn more about back-end development and how to connect everything together next week.
 
 ### What's Ruby like?
 
 #### M.I.N.A.S.W.A.N.
 
+* Yukihiro Matsumoto ("Matz") created Ruby to increase developer happiness
 * "Matz Is Nice And So We Are Nice"
 * Mentality not only applies to how you should treat your fellow developers, but also the philosophy behind Ruby itself
-* Yukihiro Matsumoto ("Matz") created Ruby to increase developer happiness
 
 > "Programmers often feel joy when they can concentrate on the creative side of programming, so Ruby is designed to make programmers happy." — Yukihiro "Matz" Matsumoto  
 
@@ -64,7 +64,7 @@ Check to make sure you have Ruby installed by running this in the Terminal: `$ r
 $ touch app.rb        # Create a Ruby file
 $ ruby file_name.rb   # Run that ruby file
 ```
-> This is the equivalent of running `node script.js` in the Terminal
+> This is the equivalent of running `$ node script.js` in the Terminal
 
 #### By REPL
 
@@ -86,7 +86,7 @@ With a partner, write down some differences in syntax, "nice" or otherwise, you 
 
 ### Variables
 
-No longer need to precede new variables with `var`. Just use the name of the variable!
+We no longer need to precede new variables with `var`. Just use the name of the variable!
 * Variables are instantiated as they are used
 * Written in `snake_case`. That means all lower case with words separated by underscores.
 * Variable names should still be semantic
@@ -234,7 +234,7 @@ Ruby uses same arithmetic operators as Javascript
 Words, just like in Javascript.
 * Surrounded by single or double-quotes
 * Ruby uses similar escape characters
-  - [List](http://www.java2s.com/Code/Ruby/String/EscapeCharacterslist.htm)
+  - [Here is a list of them](http://www.java2s.com/Code/Ruby/String/EscapeCharacterslist.htm)
   - Must instantiate string with double-quotes for escape characters to work
 
 ```rb
@@ -421,15 +421,15 @@ Read everything up until the [Data Collections Exercises](#you-do-data-collectio
 ### Arrays
 
 An ordered collection of related values. Same syntax as Javascript arrays.
-* Square brackets.
-* Values separated by commas.
-* Zero-indexed.
+* Square brackets
+* Values separated by commas
+* Zero-indexed
 
 ```rb
-numbers = [ 1, 2, 3 ]
+numbers = [1, 2, 3]
 # => [1, 2, 3]
 
-animals = [ "dog", "cat", "horse" ]
+animals = ["dog", "cat", "horse"]
 # => ["dog", "cat", "horse"]
 
 animals[0]
@@ -442,19 +442,19 @@ animals
 # => ["dog", "elephant", "horse"]
 ```
 
-Another super cool Ruby feature is that you can perform arithmetic operations -- addition, subtraction, multiplication -- on arrays!
+Another super cool Ruby feature is that you can perform arithmetic operations on arrays!
 
 ```rb
-numbers = [ 1, 2, 3 ]
+numbers = [1, 2, 3]
 # => [1, 2, 3]
 
-more_numbers = [ 4, 5, 6, ]
+more_numbers = [4, 5, 6,]
 # => [4, 5, 6]
 
 lots_of_numbers = numbers + more_numbers
 # => [1, 2, 3, 4, 5, 6]
 
-lots_of_numbers - [ 4, 5, 6 ]
+lots_of_numbers - [4, 5, 6]
 # => [1, 2, 3]
 
 numbers * 3
@@ -464,7 +464,7 @@ numbers * 3
 #### Array Methods
 
 Ruby is very nice. It provides us with an extensive library of array methods we can use to traverse and manipulate arrays.
-* [Documentation](http://ruby-doc.org/core-.0/Array.html)
+* [The Ruby documentation for `Array` is a great resource for learning more about these methods](http://ruby-doc.org/core-.0/Array.html)
 * Can't go over them all, but chances are if you could do it in Javascript then you can do it in Ruby.
 
 **IMPORTANT:** You DO NOT need to memorize these. The following is just a sample of array methods available to you. You'll come to be more familiar with these as you need them and look them up in documentation.  
@@ -476,13 +476,13 @@ Ruby is very nice. It provides us with an extensive library of array methods we 
 These Javascript methods also exist in Ruby and are used the same way.
 
 ```rb
-numbers = [ 1, 2, 3, 4, 5 ]
+numbers = [1, 2, 3, 4, 5]
 # => [1, 2, 3, 4, 5]
 
-numbers.push( 6 )
+numbers.push(6)
 # => [1, 2, 3, 4, 5, 6]
 
-numbers.push( 7, 8, 9 )
+numbers.push(7, 8, 9)
 # => [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 numbers.pop
@@ -493,10 +493,11 @@ numbers
 ```
 
 ##### Sort
-* Organizes array values from lowest to highest. Numbers and strings.
+
+Organizes array values from lowest to highest. Numbers and strings.
 
 ```rb
-numbers = [ 3, 1, 5, 2, 4 ]
+numbers = [3, 1, 5, 2, 4]
 # => [3, 1, 5, 2, 4]
 
 numbers.sort
@@ -504,31 +505,30 @@ numbers.sort
 ```
 
 ##### Delete
-* Removes an argument from an array.
-* If there are multiple instances of that argument, it will delete them all.
+
+* Removes an argument from an array
+* If there are multiple instances of that argument, it will delete them all
 * Look up: `.delete_at()`, `.slice()`
 
 ```rb
-numbers = [ 3, 1, 2, 2, 4 ]
+numbers = [3, 1, 2, 2, 4]
 # => [3, 1, 2, 2, 4]
 
-numbers.delete( 2 )
+numbers.delete(2)
 # => 2
 
 numbers
 # => [3, 1, 4]
 ```
 
-**There are a ton of array methods available to us in Ruby.** Explore them using the [Ruby documentation](http://ruby-doc.org/core-1.9.3/Array.html).
-
 ### Hashes
 
-A unordered, "dictionary-like" collection organized by key-value pairs. Very similar to Javascript objects...
+A Ruby has is an unordered, dictionary-like collection organized by key-value pairs. A hash is very similar to a Javascript object.
 
 ```rb
 wdi_class = {
   teacher: "John",  
-  students: [ "Yacko", "Wacko", "Dot" ],  
+  students: ["Yacko", "Wacko", "Dot"],  
   classroom: 2,  
   in_session: true,  
   schedule: {  
@@ -553,12 +553,12 @@ wdi_class[:teacher] = "Jack"
 # => "Jack"
 ```
 
-You can also use strings as hash keys.
+You can also use strings as hash keys...
 
 ```rb
 wdi_class = {
   "teacher" => "John",  
-  "students" => [ "Yacko", "Wacko", "Dot" ],  
+  "students" => ["Yacko", "Wacko", "Dot"],  
   "classroom" => 2,  
   "in_session" => true,  
   "schedule" => {  
@@ -587,7 +587,7 @@ wdi_class["teacher"] = "Jack"
 #### Hash Methods
 
 Like arrays, Ruby also provides us with a library of hash methods.  
-* [Documentation](http://ruby-doc.org/core-2.4.0/Hash.html)
+* [Again, the Ruby documentation is a great resource](http://ruby-doc.org/core-2.4.0/Hash.html)
 
 > As mentioned with arrays, do not worry about memorizing these methods. Just know how to look them up should the need arise.  
 
@@ -617,7 +617,7 @@ locations = {
 }  
 # => {:location_one=>"DC", :location_two=>"NY", :location_three=>"Boston"}
 
-silly_hash = classroom.merge( locations )
+silly_hash = classroom.merge(locations)
 # => {:room=>1, :location_one=>"DC", :location_two=>"NY", :location_three=>"Boston"}
 
 classroom
@@ -633,9 +633,9 @@ silly_hash
 ### Ranges
 
 Use ranges to quickly generate arrays of data types.
-* Parentheses.
-* Min and max value, separated by two periods.
-* Generate array using `.to_a` method.
+* Parentheses
+* Min and max value, separated by two periods
+* Generate array using `.to_a` method
 
 ```rb
 (1..5).to_a
@@ -737,8 +737,8 @@ Why is that so funny? Because variables are pointers to values in memory.
 ### Retrieving Memory Location
 
 We can use the `.object_id` method to demonstrate that two variables are pointing to the same object.
-* Returns an integer identifier for the object that is automatically generated by Ruby.
-* Lets use `.object_id` to demonstrate that the first diagram in this lesson is true.
+* Returns an integer identifier for the object that is automatically generated by Ruby
+* Lets use `.object_id` to demonstrate that the first diagram in this lesson is true
 
 ```rb
 a = "hi there"
@@ -766,7 +766,7 @@ b.object_id
 ### The Bang Symbol (`!`)
 
 All of the Ruby data types we have discussed so far are mutable.
-* We can not only change what variables are pointing to in memory, but we can directly modify those values stored in memory as well.
+* We can not only change what variables are pointing to in memory, but we can directly modify those values stored in memory as well
 
 Methods with an `!` attached to the end of them usually mean that they will modify the value in memory they are being called on.
 * Things can get tricky when you have multiple variables pointing at the same value. For example...
