@@ -3,7 +3,7 @@
 ## Learning Objectives
 
 * Compare/contrast Ruby and Javascript as programming languages
-* Run Ruby code by REPL and file.
+* Run Ruby code by REPL and file
 * Identify specific differences between Ruby and Javascript in the following areas...
   - Syntax
   - Variables
@@ -64,15 +64,14 @@ Check to make sure you have Ruby installed by running this in the Terminal: `$ r
 $ touch app.rb        # Create a Ruby file
 $ ruby file_name.rb   # Run that ruby file
 ```
-> This is the equivalent of running `$ node script.js` in the Terminal
 
 #### By REPL
 
-Just like Javascript and the browser console, we can use tools like Pry and IRB to run Ruby in a REPL
-* Install: `$ gem install pry`
-* Run REPL: `$ pry`
-* Quit from REPL: `exit`
-* Alternative: `$ irb`
+Just like Javascript and the browser console, we can use tools like Pry and IRB to run Ruby in a REPL.
+  1. Install: `$ gem install pry`
+  2. Run REPL: `$ pry`
+  3. Quit from REPL: `exit`
+  4. Alternative: `$ irb`
 
 > A `gem` is a tool or application written in Ruby. We install them by entering `$ gem install gem_name` in the Terminal. Explore [rubygems.org](https://rubygems.org/) if you're interested in learning more.
 
@@ -448,7 +447,7 @@ Another super cool Ruby feature is that you can perform arithmetic operations on
 numbers = [1, 2, 3]
 # => [1, 2, 3]
 
-more_numbers = [4, 5, 6,]
+more_numbers = [4, 5, 6]
 # => [4, 5, 6]
 
 lots_of_numbers = numbers + more_numbers
@@ -523,7 +522,7 @@ numbers
 
 ### Hashes
 
-A Ruby has is an unordered, dictionary-like collection organized by key-value pairs. A hash is very similar to a Javascript object.
+A Ruby hash is an unordered, dictionary-like collection organized by key-value pairs. A hash is very similar to a Javascript object.
 
 ```rb
 wdi_class = {
@@ -681,7 +680,7 @@ double 3
 You may have noticed that we use the same `return` notation as Javascript. This is called an **explicit return**, because we identify what exactly we want returned from the function.  
 
 Ruby also lets us make **implicit returns**.
-* This means that when we do not need to use the `return` keyword. Ruby will automatically return the value of the last line of code in the method.
+* This means that we do not need to use the `return` keyword. Ruby will automatically return the value of the last line of code in the method.
 * We encourage you to use **explicit returns** so we know exactly what your method is returning
 
 ```rb
