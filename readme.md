@@ -32,7 +32,7 @@ What is a server?
 
 #### M.I.N.A.S.W.A.N.
 
-* Yukihiro Matsumoto ("Matz") created Ruby to increase developer happiness
+* Yukihiro Matsumoto ("Matz") created Ruby in the mid-90s to increase developer happiness
 * "Matz Is Nice And So We Are Nice"
 * Mentality not only applies to how you should treat your fellow developers, but also the philosophy behind Ruby itself
 
@@ -62,7 +62,7 @@ Check to make sure you have Ruby installed by running this in the Terminal: `$ r
 
 ```bash
 $ touch app.rb        # Create a Ruby file
-$ ruby file_name.rb   # Run that ruby file
+$ ruby app.rb   # Run that ruby file
 ```
 
 #### By REPL
